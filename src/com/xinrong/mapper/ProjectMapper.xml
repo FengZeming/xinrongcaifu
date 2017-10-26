@@ -225,51 +225,51 @@
   	select 
     <include refid="selectList" />
      FROM project p
-    <trim prefix="where" suffix="" suffixOverrides="and" >
+    <trim prefix="where" suffix="" prefixOverrides="and" >
       <if test="id != null" >
-        p.id=#{id}
+       and id=#{id}
       </if>
       <if test="projectname != null" >
-        p.projectName=#{projectname}
+      and  projectName=#{projectname}
       </if>
       <if test="projectfinancingtime != null" >
-        p.projectFinancingTime=#{projectfinancingtime}
+      and  projectFinancingTime=#{projectfinancingtime}
       </if>
       <if test="projectduration != null" >
-        p.projectDuration=#{projectduration}
+       and projectDuration=#{projectduration}
       </if>
       <if test="projectcreationtime != null" >
-        p.projectCreationTime=#{projectcreationtime}
+       and projectCreationTime=#{projectcreationtime}
       </if>
       <if test="projectaudittime != null" >
-        p.projectAuditTime=#{projectaudittime}
+      and  projectAuditTime=#{projectaudittime}
       </if>
       <if test="startdatefinancing != null" >
-        p.startDateFinancing=#{startdatefinancing}
+      and  startDateFinancing=#{startdatefinancing}
       </if>
       <if test="expectedannualized != null" >
-        p.expectedAnnualized=#{expectedannualized}
+       and expectedAnnualized=#{expectedannualized}
       </if>
       <if test="seriesid != null" >
-        p.seriesId=#{seriesid}
+      and  seriesId=#{seriesid}
       </if>
       <if test="expectedfinancingamount != null" >
-        p.expectedFinancingAmount=#{expectedfinancingamount}
+      and  expectedFinancingAmount=#{expectedfinancingamount}
       </if>
       <if test="actualfinancingamount != null" >
-        p.actualFinancingAmount=#{actualfinancingamount}
+      and  actualFinancingAmount=#{actualfinancingamount}
       </if>
       <if test="insurancecompanyid != null" >
-        p.insuranceCompanyId=#{insurancecompanyid}
+      and  insuranceCompanyId=#{insurancecompanyid}
       </if>
       <if test="financinguserid != null" >
-        p.financingUserId=#{financinguserid}
+      and  financingUserId=#{financinguserid}
       </if>
       <if test="projectprogress != null" >
-        p.projectProgress=#{projectprogress}
+      and  p.projectProgress=#{projectprogress}
       </if>
       <if test="receivableway != null" >
-        p.receivableWay=#{receivableway}
+      and  p.receivableWay=#{receivableway}
       </if>
     </trim>
   </select>

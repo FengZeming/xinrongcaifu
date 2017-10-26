@@ -50,4 +50,8 @@ public interface UsersService {
      * 查询全部
      */
     List<Users> selectAll(Users users);
+    /**
+     * 登陆
+     */
+    boolean login(String username,String password);
 }

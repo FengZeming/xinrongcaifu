@@ -1,0 +1,23 @@
+package com.xinrong.util;
+/**
+ * 工具类-项目
+ * @author lenovo
+ *
+ */
+public class ProjectUtil {
+	/**
+	 * 项目名称生成方法
+	 */
+	public static String createProjectName(String seriesname,String end){
+		String date=DateTimeUtil.getDateString();
+		String name=seriesname+"-"+date+"之";
+		Integer endNum=Integer.parseInt(end);
+		endNum=endNum++;
+		end=String.valueOf(endNum);
+		if(end.length()<4){
+			end="0"+end;
+		}
+		name=name+end;
+		return name;
+	}
+}

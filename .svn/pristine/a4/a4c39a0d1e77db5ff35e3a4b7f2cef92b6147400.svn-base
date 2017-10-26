@@ -1,0 +1,10 @@
+$(function(){
+	for(var i=1;i<=4;i++){
+		$("#series").before("<li id='tab"+i+"'></li>");
+		$("#tab1").html("信系列");
+		$("#tab2").html("优品");
+		$("#tab3").html("ad");
+		$("#tab4").html("ap");
+	}
+	
+})

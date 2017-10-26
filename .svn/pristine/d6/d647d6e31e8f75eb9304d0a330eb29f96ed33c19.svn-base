@@ -1,0 +1,20 @@
+package com.xinrong.controller.before.finacing;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+/**
+ * 融资页
+ * @author lenovo
+ *
+ */
+@Controller
+public class FinacingController {
+	
+	/**
+	 * 进入融资页
+	 */
+	@RequestMapping("www.xinrong.com/finacing.html")
+	public String goIntoFinacingIndex(){
+		return "www.xinrong.com/finacing";
+	}
+}

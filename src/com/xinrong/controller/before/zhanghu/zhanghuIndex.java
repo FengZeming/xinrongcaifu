@@ -1,0 +1,21 @@
+package com.xinrong.controller.before.zhanghu;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+/**
+ * 账户首页 Controller
+ * @author lenovo
+ *
+ */
+@Controller
+public class zhanghuIndex {
+	
+	/**
+	 * 进入账户首页
+	 */
+	@RequestMapping("xin/2.0/views/account/account_index.shtml.htm")
+	public String goIntoZhanghuIndex(){
+		return "xin/2.0/views/account/account_index";
+	}
+}

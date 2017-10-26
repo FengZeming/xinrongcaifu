@@ -1,0 +1,181 @@
+package com.xinrong.bean;
+
+import java.util.Date;
+
+public class Project {
+    private Integer id;
+
+    private String projectname;//项目名称
+
+    private Integer projectfinancingtime;//融资期限
+
+    private Integer projectduration;//项目运行期限
+
+    private Date projectcreationtime;//项目创建日期
+
+    private Date projectaudittime;//项目审核时间
+
+    private Date startdatefinancing;//开始融资日期
+
+    private Double expectedannualized;//预期年化收益率
+
+    private Integer seriesid;//所属系列ID（关联系列表）
+
+    private Double expectedfinancingamount;//预期融资金额 	
+
+    private Double actualfinancingamount;//实际融资金额
+
+    private Integer insurancecompanyid;//第三方担保公司ID
+
+    private Integer financinguserid;//融资用户id
+
+    private Integer projectprogress;//项目进程-关联字典表 1.未审核2.融资中3.已打款4.已返款
+    
+    private Integer receivableway;//回款方式-关联字典表status字段1.等额本息2.按月付息
+    
+    //连表查询字段
+    private String receivablewayName;//回款方式名称
+    private String projectProgressName;//项目进程名称
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public String getProjectname() {
+		return projectname;
+	}
+
+	public void setProjectname(String projectname) {
+		this.projectname = projectname;
+	}
+
+	public Integer getProjectfinancingtime() {
+		return projectfinancingtime;
+	}
+
+	public void setProjectfinancingtime(Integer projectfinancingtime) {
+		this.projectfinancingtime = projectfinancingtime;
+	}
+
+	public Integer getProjectduration() {
+		return projectduration;
+	}
+
+	public void setProjectduration(Integer projectduration) {
+		this.projectduration = projectduration;
+	}
+
+	public Date getProjectcreationtime() {
+		return projectcreationtime;
+	}
+
+	public void setProjectcreationtime(Date projectcreationtime) {
+		this.projectcreationtime = projectcreationtime;
+	}
+
+	public Date getProjectaudittime() {
+		return projectaudittime;
+	}
+
+	public void setProjectaudittime(Date projectaudittime) {
+		this.projectaudittime = projectaudittime;
+	}
+
+	public Date getStartdatefinancing() {
+		return startdatefinancing;
+	}
+
+	public void setStartdatefinancing(Date startdatefinancing) {
+		this.startdatefinancing = startdatefinancing;
+	}
+
+	public Double getExpectedannualized() {
+		return expectedannualized;
+	}
+
+	public void setExpectedannualized(Double expectedannualized) {
+		this.expectedannualized = expectedannualized;
+	}
+
+	public Integer getSeriesid() {
+		return seriesid;
+	}
+
+	public void setSeriesid(Integer seriesid) {
+		this.seriesid = seriesid;
+	}
+
+	public Double getExpectedfinancingamount() {
+		return expectedfinancingamount;
+	}
+
+	public void setExpectedfinancingamount(Double expectedfinancingamount) {
+		this.expectedfinancingamount = expectedfinancingamount;
+	}
+
+	public Double getActualfinancingamount() {
+		return actualfinancingamount;
+	}
+
+	public void setActualfinancingamount(Double actualfinancingamount) {
+		this.actualfinancingamount = actualfinancingamount;
+	}
+
+	public Integer getInsurancecompanyid() {
+		return insurancecompanyid;
+	}
+
+	public void setInsurancecompanyid(Integer insurancecompanyid) {
+		this.insurancecompanyid = insurancecompanyid;
+	}
+
+	public Integer getFinancinguserid() {
+		return financinguserid;
+	}
+
+	public void setFinancinguserid(Integer financinguserid) {
+		this.financinguserid = financinguserid;
+	}
+
+	public Integer getProjectprogress() {
+		return projectprogress;
+	}
+
+	public void setProjectprogress(Integer projectprogress) {
+		this.projectprogress = projectprogress;
+	}
+
+	public Integer getReceivableway() {
+		return receivableway;
+	}
+
+	public void setReceivableway(Integer receivableway) {
+		this.receivableway = receivableway;
+	}
+
+	public String getReceivablewayName() {
+		return receivablewayName;
+	}
+
+	public void setReceivablewayName(String receivablewayName) {
+		this.receivablewayName = receivablewayName;
+	}
+
+	public String getProjectProgressName() {
+		return projectProgressName;
+	}
+
+	public void setProjectProgressName(String projectProgressName) {
+		this.projectProgressName = projectProgressName;
+	}
+
+	
+
+	
+	
+    
+}

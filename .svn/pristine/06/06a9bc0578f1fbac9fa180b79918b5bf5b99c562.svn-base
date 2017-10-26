@@ -1,0 +1,22 @@
+package com.xinrong.util;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+/**
+ * 时间日期工具
+ * @author lenovo
+ *
+ */
+public class DateTimeUtil {
+	
+	/**
+	 * 获取当前日期字符串
+	 */
+	public static String getDateString(){
+		Date date=new Date();
+		SimpleDateFormat format=new SimpleDateFormat("yyMMdd");
+		String aString=format.format(date);
+		return aString;
+	}
+}

@@ -1,0 +1,33 @@
+package com.xinrong.controller.before.registAndLog;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.xinrong.bean.Users;
+import com.xinrong.service.ProjectService;
+import com.xinrong.service.UsersService;
+
+@Controller
+public class RegistController {
+	@Autowired
+	private UsersService usersService ;
+	
+	/**
+	 * 进入注册用户页面
+	 */
+	@RequestMapping("www.xinrong.com/2.0/views/account/register4.0.shtml.htm")
+	public String goIntoRegist(){
+		return "www.xinrong.com/2.0/views/account/register3.0";
+	}
+	
+	/**
+	 * 进入注册完成页面
+	 */
+	@RequestMapping("www.xinrong.com/2.0/views/account/registerSuccess.html")
+	public String goIntoSuccess(@ModelAttribute("users")Users users){
+		
+		return "www.xinrong.com/2.0/views/account/registSuccess";
+	}
+}

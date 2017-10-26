@@ -1,0 +1,45 @@
+package com.xinrong.controller.before.index;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.xinrong.bean.Project;
+import com.xinrong.service.ProjectService;
+import com.xinrong.service.ProvincesService;
+/**
+ * 首页index Controller
+ * @author lenovo
+ *
+ */
+@Controller
+public class IndexController {
+	@Autowired
+	private ProjectService projectService;
+	
+	public ProjectService getProjectService() {
+		return projectService;
+	}
+
+	public void setProjectService(ProjectService projectService) {
+		this.projectService = projectService;
+	}
+
+
+	/**
+	 * 进入信融财富首页
+	 * @return
+	 */
+	@RequestMapping("www.xinrong.com/index.html")
+	public String goIntoIndex(Model model){
+		Project project=new Project();
+		List<Project> list=projectService.selectAll(project);
+		model.addAttribute("list",list);
+		return "www.xinrong.com/index";
+	}
+	
+	
+}

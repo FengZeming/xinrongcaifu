@@ -1,0 +1,16 @@
+package com.xinrong.controller.before.invest;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class InvestDetail {
+	
+	/**
+	 * 进入投资详情页
+	 */
+	@RequestMapping("www.xinrong.com/2.0/detail.shtml.htm")
+	public String goIntoInvestDetail(){
+		return "www.xinrong.com/2.0/detail";
+	}
+}

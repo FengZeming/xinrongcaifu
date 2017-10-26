@@ -1,0 +1,21 @@
+package com.xinrong.controller.before.invest;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+/**
+ * 投资列表页invest Controller
+ * @author lenovo
+ *
+ */
+@Controller
+public class InvestController {
+	
+	/**
+	 * 进入投资列表页
+	 */
+	@RequestMapping("www.xinrong.com/invest.shtml.htm")
+	public String goIntoInvest(){
+		return "www.xinrong.com/invest";
+	}
+}

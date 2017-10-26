@@ -1,5 +1,4 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
-
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -7,6 +6,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+ 
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
@@ -173,30 +174,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	}
 	
 </script>
-<!--  <script type="text/javascript">
- 
-$(document).ready(function(){
-	alert("nih");
-	
-	
-	jQuery.ajax({
-        "url":"chazhanghu.json",
-        "type":"post",
-        "data":"opr=List1",
-        "dataType":"json",
-        "success":callBack
-    });
-
-    function callBack(data){
-    	$("#xinrongzhanghuyue").html("ni");
- }
- 
- 
-})//页面加载结束 -->
 
 
-
-</script>
 
 
 
@@ -362,7 +341,7 @@ $(document).ready(function(){
 		}
 		
 		
-	}L
+	}
 })();
 $(document).ready(function(){
 	$(".h-login-reg a").mouseenter(function(){
@@ -421,12 +400,12 @@ $(function(){
         
             <div class="ui-form-line">
                 信融财富账户余额：
-                <strong class="g-out" id="xinrongzhanghuyue"></strong> 元
+                <strong class="g-out"></strong> 元
             </div>
 			
             <div class="ui-form-line money" style="height:auto">
                 
-               <!--  <div class="rechargefont"><dl><dt>选择方式：</dt><dd><ul><li><a href="recharge.htm" tppabs="https://xin/my/recharge">有网银大额支付</a></li><li class="hoverbg bor"><a href="rechargec.htm" tppabs="https://xin/my/rechargec">无网银快捷支付</a></li></ul></dd></dl><div style="clear:both"></div>
+                <div class="rechargefont"><dl><dt>选择方式：</dt><dd><ul><li><a href="recharge.htm" tppabs="https://xin/my/recharge">有网银大额支付</a></li><li class="hoverbg bor"><a href="rechargec.htm" tppabs="https://xin/my/rechargec">无网银快捷支付</a></li></ul></dd></dl><div style="clear:both"></div>
                 <dl style="padding-top:20px;">
                 <dt>充值渠道：</dt>
                 <dd>
@@ -434,15 +413,14 @@ $(function(){
                        <option value="quick_pc">自动选择</option><!-- 
                         <option value="lianlian_pc">自动选择</option>
                         --><!--<option value="beifu_quick">贝付</option>-->
-                       <!--  <option value="lianlian_pc">连连支付</option> -->
+                        <option value="lianlian_pc">连连支付</option>
                         <!--<option value="yeepay">易宝支付</option>-->
-                      <!--   <option value="baofuquick">宝付支付</option>
-                        <option value="guocai">天付宝</option> -->
+                        <option value="baofuquick">宝付支付</option>
+                        <option value="guocai">天付宝</option>
                        <!--<option value="sft">盛付通</option>-->
-                <!--    </select>
+                   </select>
                 </dd>
-                </dl> -->
-                 
+                </dl>
                 <div style="clear:both"></div></div>
                 
                <br/>
@@ -867,4 +845,6 @@ var _hmt = _hmt || [];
 <script src="../s/js/www/user-min.js-v=1591" tppabs="https://xin/s/js/www/user-min.js?v=1591"></script>
 <script>AA.User.Recharge.init();</script>
 </body>
+</html>
+  </body>
 </html>

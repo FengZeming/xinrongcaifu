@@ -9,17 +9,17 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>信融财富</title>
-<link href="css/basic.css" tppabs="https://xin/2.0/css/basic.css" rel="stylesheet" type="text/css" />
-<link href="css/dialog.css" tppabs="https://xin/2.0/css/dialog.css" rel="stylesheet" type="text/css" />
-<link href="css/global.css" tppabs="https://xin/2.0/css/global.css" rel="stylesheet" type="text/css" />
-<link href="css/login2.0.css" tppabs="https://xin/2.0/css/login2.0.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="js/jquery-1.10.2.min.js" tppabs="https://xin/2.0/js/jquery-1.10.2.min.js"></script>
-<script type="text/javascript" src="js/var.js" tppabs="https://xin/2.0/js/var.js"></script>
-<script type="text/javascript" src="../s/js/AA.base-min.js" tppabs="https://xin/s/js/AA.base-min.js"></script>
-<script type="text/javascript" src="../s/vendor/artDialog/jquery.artDialog.js" tppabs="https://xin/s/vendor/artDialog/jquery.artDialog.js"></script>
-<script type="text/javascript" src="../s/vendor/artDialog/dialog_ex.js" tppabs="https://xin/s/vendor/artDialog/dialog_ex.js"></script>
-<script type="text/javascript" src="js/mod/login2.0.js" tppabs="https://xin/2.0/js/mod/login2.0.js"></script>
-<script src="js/rsa.js" tppabs="https://xin/2.0/js/rsa.js"></script>
+<link href="css/basic.css"  rel="stylesheet" type="text/css" />
+<link href="css/dialog.css" rel="stylesheet" type="text/css" />
+<link href="css/global.css"  rel="stylesheet" type="text/css" />
+<link href="css/login2.0.css"  rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="js/jquery-1.10.2.min.js" ></script>
+<script type="text/javascript" src="js/var.js" ></script>
+<script type="text/javascript" src="../s/js/AA.base-min.js" ></script>
+<script type="text/javascript" src="../s/vendor/artDialog/jquery.artDialog.js" ></script>
+<script type="text/javascript" src="../s/vendor/artDialog/dialog_ex.js" ></script>
+<script type="text/javascript" src="js/mod/login2.0.js" ></script>
+<script src="js/rsa.js" ></script>
   <script type="text/javascript">
     $(function(){
       $('.h-login-reg').show();
@@ -43,46 +43,46 @@ $(function(){
 </script>
 <div class="hmenu_nav">
   <div class="main PositionR">
-    <div class="logo left PositionR"><a href="../index.shtml.htm" tppabs="https://xin/index.shtml"><img src="images/logo.gif" tppabs="https://xin/2.0/images/logo.gif" /></a><a href="views/about/shareholder.shtml.htm" tppabs="https://xin/2.0/views/about/shareholder.shtml" class="logo_font">上市公司系</a></div>
-    <div class="right top_my"><a href="views/account/account_index.shtml.htm" tppabs="https://xin/2.0/views/account/account_index.shtml" class="f-my" id="nav_my">我的账户</a> <a id="top_exit" href="javascript:AA.RapidLogin.loginout();" class="f_exit" style="display:none;">退出</a> <span class="h-login-reg h-login" style="display: none;"><i></i><a href="login2.0.html" tppabs="https://xin/2.0/login2.0.html" class="flogin">登录</a><a href="views/account/register4.0.shtml.htm" tppabs="https://xin/2.0/views/account/register4.0.shtml" class="freg">注册</a></span></div>
+    <div class="logo left PositionR"><a href="../index.shtml.htm" ><img src="images/logo.gif"  /></a><a href="views/about/shareholder.shtml.htm"  class="logo_font">上市公司系</a></div>
+    <div class="right top_my"><a href="views/account/account_index.shtml.htm"  class="f-my" id="nav_my">我的账户</a> <a id="top_exit" href="javascript:AA.RapidLogin.loginout();" class="f_exit" style="display:none;">退出</a> <span class="h-login-reg h-login" style="display: none;"><i></i><a href="login2.0.html"  class="flogin">登录</a><a href="views/account/register4.0.shtml.htm"  class="freg">注册</a></span></div>
     <div class="clear"></div>
   </div>
   <div class="h_nav" id="hmenu_nav">
     <div class="main PositionR">
       <ul>
-        <li><a href="../index.shtml.htm" tppabs="https://xin/index.shtml" id="nav_index">首页</a></li>
-        <li><a href="../invest.shtml.htm" tppabs="https://xin/invest.shtml" id="nav_invest">投资<i class="arrow"></i></a>
+        <li><a href="../index.shtml.htm"  id="nav_index">首页</a></li>
+        <li><a href="../invest.shtml.htm"  id="nav_invest">投资<i class="arrow"></i></a>
         <ul>
-        <li><a href="calculator.html#finvest" tppabs="https://xin/2.0/calculator.html#finvest" target="_blank">投资计算器</a></li>
+        <li><a href="calculator.html#finvest"  target="_blank">投资计算器</a></li>
         </ul>
         </li>
-        <li><a href="action/xr_huahua/huahua.shtml.htm" tppabs="https://xin/2.0/action/xr_huahua/huahua.shtml" id="nav_huahua">信融花花<i class="arrow"></i><b class="hh_icon"><img src="images/hh_icon.png" tppabs="https://xin/2.0/images/hh_icon.png" /></b></a>
+        <li><a href="action/xr_huahua/huahua.shtml.htm"  id="nav_huahua">信融花花<i class="arrow"></i><b class="hh_icon"><img src="images/hh_icon.png"  /></b></a>
           <ul>
-          	<li><a href="action/xr_huahua/huahua.shtml.htm" tppabs="https://xin/2.0/action/xr_huahua/huahua.shtml" target="_blank">我要借款</a></li>
-            <li><a href="calculator.html" tppabs="https://xin/2.0/calculator.html" target="_blank">借款计算器</a></li>
+          	<li><a href="action/xr_huahua/huahua.shtml.htm"  target="_blank">我要借款</a></li>
+            <li><a href="calculator.html"  target="_blank">借款计算器</a></li>
           </ul>
         </li>
-        <li><a href="action/zt_call/xr_call.shtml.htm" tppabs="https://xin/2.0/action/zt_call/xr_call.shtml" id="nav_duoduo">朵朵来电</a></li>
-        <li><a href="views/about/invest_help.shtml.htm" tppabs="https://xin/2.0/views/about/invest_help.shtml" id="nav_invest_help">新手指引<i class="arrow"></i></a>
+        <li><a href="action/zt_call/xr_call.shtml.htm"  id="nav_duoduo">朵朵来电</a></li>
+        <li><a href="views/about/invest_help.shtml.htm"  id="nav_invest_help">新手指引<i class="arrow"></i></a>
           <ul>
-          	<li><a href="views/about/invest_help.shtml.htm" tppabs="https://xin/2.0/views/about/invest_help.shtml" target="_blank">投资帮助</a></li>
-          	<li><a href="views/about/risk.shtml.htm" tppabs="https://xin/2.0/views/about/risk.shtml" target="_blank">风险控制</a></li>
-            <li><a href="views/about/laws_regulations.shtml.htm#navLaws" tppabs="https://xin/2.0/views/about/laws_regulations.shtml#navLaws" target="_blank">法律法规</a></li>
-            <li><a href="views/about/help.shtml.htm" tppabs="https://xin/2.0/views/about/help.shtml" id="nav_help" target="_blank">问题答疑</a></li>
+          	<li><a href="views/about/invest_help.shtml.htm" target="_blank">投资帮助</a></li>
+          	<li><a href="views/about/risk.shtml.htm" target="_blank">风险控制</a></li>
+            <li><a href="views/about/laws_regulations.shtml.htm#navLaws"  target="_blank">法律法规</a></li>
+            <li><a href="views/about/help.shtml.htm"  id="nav_help" target="_blank">问题答疑</a></li>
           </ul>
         </li>
-        <li><a href="views/about/about.shtml.htm" tppabs="https://xin/2.0/views/about/about.shtml" id="nav_about">信息披露<i class="arrow"></i></a>
+        <li><a href="views/about/about.shtml.htm"  id="nav_about">信息披露<i class="arrow"></i></a>
           <ul>
-            <li><a href="views/about/about.shtml.htm" tppabs="https://xin/2.0/views/about/about.shtml" id="nav_about_index">公司简介</a></li>
-            <li><a href="views/about/team.shtml.htm" tppabs="https://xin/2.0/views/about/team.shtml">团队介绍</a></li>
-            <li><a href="views/about/service_data.shtml.htm" tppabs="https://xin/2.0/views/about/service_data.shtml">运营数据</a></li>
-            <li><a href="views/about/xr_announcement.shtml.htm" tppabs="https://xin/2.0/views/about/xr_announcement.shtml">平台公告</a></li>
-            <li><a href="views/about/partner.shtml.htm" tppabs="https://xin/2.0/views/about/partner.shtml">合作机构</a></li>
-            <li><a href="views/about/contact.shtml.htm" tppabs="https://xin/2.0/views/about/contact.shtml">联系我们</a></li>
+            <li><a href="views/about/about.shtml.htm"  id="nav_about_index">公司简介</a></li>
+            <li><a href="views/about/team.shtml.htm" >团队介绍</a></li>
+            <li><a href="views/about/service_data.shtml.htm" >运营数据</a></li>
+            <li><a href="views/about/xr_announcement.shtml.htm" >平台公告</a></li>
+            <li><a href="views/about/partner.shtml.htm" >合作机构</a></li>
+            <li><a href="views/about/contact.shtml.htm" >联系我们</a></li>
           </ul>
         </li>
       </ul>
-      <div class="nav_r"><a href="vip.html" tppabs="https://xin/2.0/vip.html" id="nav_vip">VIP特权</a> | <a href="../gift.htm" tppabs="https://xin/gift" id="nav_gift">积品汇</a></div>
+      <div class="nav_r"><a href="vip.html"  id="nav_vip">VIP特权</a> | <a href="../gift.htm"  id="nav_gift">积品汇</a></div>
     </div>
   </div>
 </div>
@@ -96,8 +96,8 @@ $(function(){
 .fengxian_dialog .fx_sub .sub02{ font-size:18px; width:166px; height:45px; line-height:45px;}
 .fengxian_dialog .fx_sub p a{ color:#a1a1a1; font-size:15px;}
 </style>
-<script type="text/javascript" src="js/wbox.js" tppabs="https://xin/2.0/js/wbox.js"></script>
-<link rel="stylesheet" href="css/dialog-wbox.css" tppabs="https://xin/2.0/css/dialog-wbox.css">
+<script type="text/javascript" src="js/wbox.js" ></script>
+<link rel="stylesheet" href="css/dialog-wbox.css" >
 <!--风险测评-->
 <div id="fxpc_dialog" style="display: none;">
   <div class="fengxian_dialog">
@@ -216,11 +216,11 @@ $(document).ready(function(){
     <div class="QRCon">
       <dl id="wechatQR" >
         <dt><i class="AllIcon iconWX"></i>关注微信订阅号</dt>
-        <dd><img src="images/login/wechatQR.jpg" tppabs="https://xin/2.0/images/login/wechatQR.jpg" ></dd>
+        <dd><img src="images/login/wechatQR.jpg" ></dd>
       </dl>
       <dl id="mobileQR">
         <dt><i class="AllIcon02 iconMP"></i>下载手机客户端</dt>
-        <dd><img  src="../s/img/w07.jpg" tppabs="https://xin/s/img/w07.jpg" ></dd>
+        <dd><img  src="../s/img/w07.jpg"  ></dd>
       </dl>
     </div>
     <form id="rapid-login-form" class="loginForm" >
@@ -245,7 +245,7 @@ $(document).ready(function(){
         <p id="cap-error" class="ui-tip"></p>
       </div>
       <div class="forgetPwCon">
-        <a class="forgetPw" href="views/account/back_password.shtml.htm" tppabs="https://xin/2.0/views/account/back_password.shtml" target="_blank">忘记密码？</a>
+        <a class="forgetPw" href="views/account/back_password.shtml.htm"  target="_blank">忘记密码？</a>
       </div>
       <!--登录按钮-->
       <div class="submitCon">
@@ -273,12 +273,12 @@ $(document).ready(function(){
             <div class="ui-form-line">
                 <label for="username" class="ui-form-label">账　号：</label>
                 <input type="text" name="username" id="rapid-userName" class="ui-form-input" maxlength="50" tabindex="1" placeholder="账户名 / Email / 手机号"/>
-                <a href="views/account/register4.0.shtml.htm" tppabs="https://xin/2.0/views/account/register4.0.shtml" class="blue" target="_blank">注册账号</a>
+                <a href="views/account/register4.0.shtml.htm"  class="blue" target="_blank">注册账号</a>
             </div>
             <div class="ui-form-line">
                 <label for="password" class="ui-form-label">密　码：</label>
                 <input type="password" name="password" id="rapid-userPw" class="ui-form-input" maxlength="16" tabindex="2" placeholder="登录密码"/>
-                <a href="views/account/back_password.shtml.htm" tppabs="https://xin/2.0/views/account/back_password.shtml" class="blue" target="_blank">忘记账号/密码？</a>
+                <a href="views/account/back_password.shtml.htm"  class="blue" target="_blank">忘记账号/密码？</a>
             </div>
             <div class="ui-form-line ui-form-captcha" id="captcha_view" style="display:none">
                 <label for="rapid-captcha" class="ui-form-label">验证码：</label>
@@ -290,7 +290,7 @@ $(document).ready(function(){
                 <input  type="submit" class="ui-button ui-button-orange" style="width: 234px;height: 36px;line-height: 36px;" tabindex="4" value="登 录" />
                 
                 <em class="ui-tip"></em>
-                <img src="images/Connect_logo_7.png" tppabs="https://xin/2.0/images/Connect_logo_7.png" onclick=" AA.RapidLogin.qqClick();" style="cursor:pointer; margin-left:8px;"></img>
+                <img src="images/Connect_logo_7.png"  onclick=" AA.RapidLogin.qqClick();" style="cursor:pointer; margin-left:8px;"></img>
             </div>
             <style>
             .login-succ{ margin:auto; width:290px; height:210px; position:fixed; left:0; right:0px; top:0px; bottom:0px; z-index:999; filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#CC000000', endColorstr='#CC000000'); border-radius:8px; text-align:center;}
@@ -301,7 +301,7 @@ $(document).ready(function(){
             </style>
             <div id="login_suc_dialog" style="display: none;">
             <div class="login-succ">
-            <h1><img src="images/c-login1.gif" tppabs="https://xin/2.0/images/c-login1.gif" width="68" height="93" /><span><i class="icondagou"></i>登录成功</span></h1>
+            <h1><img src="images/c-login1.gif"  width="68" height="93" /><span><i class="icondagou"></i>登录成功</span></h1>
             </div>
             </div>
         </form>
@@ -309,9 +309,9 @@ $(document).ready(function(){
 </div> 
 
 </div>
-<script type="text/javascript" src="js/rsa.js" tppabs="https://xin/2.0/js/rsa.js"></script>
-<script type="text/javascript" src="../webapp2.0/js/wbox.js" tppabs="https://xin/webapp2.0/js/wbox.js"></script>
-<link rel="stylesheet" href="css/dialog-wbox.css" tppabs="https://xin/2.0/css/dialog-wbox.css">
+<script type="text/javascript" src="js/rsa.js" ></script>
+<script type="text/javascript" src="../webapp2.0/js/wbox.js" ></script>
+<link rel="stylesheet" href="css/dialog-wbox.css" >
 <script type="text/javascript">
     $.ajax({
         url:'https://xin/v2/login/get_login_fail_times.jso',

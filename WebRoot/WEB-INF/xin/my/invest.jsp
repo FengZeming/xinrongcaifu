@@ -12,13 +12,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <title>信融财富 - 上市公司战略投资，P2P网贷专业互联网投资理财平台 - 我的账户</title>
     <script>if(top.location!=self.location){top.location.replace(self.location);}</script>
 <!--<script>if('https:' != location.protocol){location = location.href.replace('http:','https:');}</script>-->
-<!--[if IE 6]><script>document.execCommand("BackgroundImageCache", false, true);</script><![endif]-->    <link rel="stylesheet" href="../s/css/global.css-v=1591.css"  />
-<link rel="stylesheet" href="../s/css/www/user.css-v=1591.css"  />
-<link rel="stylesheet" href="../s/css/v2/Basic.css-v=1591.css"  />
+<!--[if IE 6]><script>document.execCommand("BackgroundImageCache", false, true);</script><![endif]-->    <link rel="stylesheet" href="../s/css/global.css-v=1591.css" tppabs="https://xin/s/css/global.css?v=1591" />
+<link rel="stylesheet" href="../s/css/www/user.css-v=1591.css" tppabs="https://xin/s/css/www/user.css?v=1591" />
+<link rel="stylesheet" href="../s/css/v2/Basic.css-v=1591.css" tppabs="https://xin/s/css/v2/Basic.css?v=1591" />
     <script>var G_ENV_VAR = {WWW:'https://xin/',STATIC:'http://s.xinrong.com/',BBS:'http://bbs.xinrong.com/',UID:'',UNAME:'',MSG_NUM:'',VIP: '',IS_CHECKED_EMAIL: false,IS_CHECKED_MOBILE: false,HAS_TRADE_PASSWORD: false,IS_CHECKED_IDENTIFICATION: false,IS_CHECKED_BANKCARD: false}</script>
-<script src="../s/js/lib/jquery.min.js-v=1591" ></script>
-<script src="../s/js/AA.base-min.js-v=1591" ></script>
-<script type="text/javascript" src="../2.0/js/rsa.js" ></script>
+<script src="../s/js/lib/jquery.min.js-v=1591" tppabs="https://xin/s/js/lib/jquery.min.js?v=1591"></script>
+<script src="../s/js/AA.base-min.js-v=1591" tppabs="https://xin/s/js/AA.base-min.js?v=1591"></script>
+<script type="text/javascript" src="../2.0/js/rsa.js" tppabs="https://xin/2.0/js/rsa.js"></script>
 </head>
 <style>
 .invest_msg{ position:relative;}
@@ -251,47 +251,59 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 </style>
 
-
+<!--<div class="g-header" >
+    <div class="g-grid">
+        <div class="happynewyear"></div>
+        <a class="g-logo" href="http://xin/" hidefocus="true" style=" position: relative;"><img src="/2.0/images/logo.gif" title="信融财富 - 安全融资理财平台"></a>
+                <!--<ul class="g-nav">
+            <li><a href="/" class="channel g-home" hidefocus="true">首页</a></li>
+            <li><a href="/invest.shtml" class="channel g-invest" hidefocus="true">投资理财</a></li>
+            <li><a href="https://xin/about/introduction" class="channel g-service" hidefocus="true">服务介绍</a></li>
+            <li><a href="https://xin/about/security" class="channel g-security" hidefocus="true">安全保障</a></li>
+            <li><a href="https://xin/about/index" class="channel g-about" hidefocus="true">关于信融财富</a></li>
+            <li><a href="javascript:AA.RapidLogin.popup('https://xin/my');" class="channel g-my" hidefocus="true">我的账户</a></li>
+        </ul>-->
+        <!--    </div>
+</div>-->
 
 <div class="hmenu_nav">
   <div class="main PositionR">
-    <div class="logo left PositionR"><a href="../index.htm" ><img src="../2.0/images/logo.gif"  /></a><a href="../2.0/views/about/shareholder.shtml.htm"  class="logo_font">上市公司系</a></div>
-    <div class="right top_my"><a href="../2.0/views/account/account_index.htm"  class="f-my" id="nav_my">我的账户</a> <a id="j-logout" href="../index.shtml.htm"  class="f_exit" style="display:none;">退出</a><span class="h-login-reg h-login"><i></i><a href="../2.0/login2.0.html"  class="flogin">登录</a><a href="../2.0/views/account/register4.0.shtml.htm"  class="freg">注册</a></span></div>
+    <div class="logo left PositionR"><a href="../index.htm" tppabs="https://xin/index.shtml"><img src="../2.0/images/logo.gif" tppabs="https://xin/2.0/images/logo.gif" /></a><a href="../2.0/views/about/shareholder.shtml.htm" tppabs="https://xin/2.0/views/about/shareholder.shtml" class="logo_font">上市公司系</a></div>
+    <div class="right top_my"><a href="../2.0/views/account/account_index.htm" tppabs="https://xin/2.0/views/account/account_index.shtml" class="f-my" id="nav_my">我的账户</a> <a id="j-logout" href="../index.shtml.htm" tppabs="https://xin/logout" class="f_exit" style="display:none;">退出</a><span class="h-login-reg h-login"><i></i><a href="../2.0/login2.0.html" tppabs="https://xin/2.0/login2.0.html" class="flogin">登录</a><a href="../2.0/views/account/register4.0.shtml.htm" tppabs="https://xin/2.0/views/account/register4.0.shtml" class="freg">注册</a></span></div>
     <div class="clear"></div>
   </div>
   <div class="h_nav" id="hmenu_nav">
     <div class="main PositionR">
       <ul>
-        <li><a href="index.htm"  id="nav_index">首页</a></li>
-        <li><a href="invest.shtml.htm"  id="nav_invest">投资<i class="arrow"></i></a>
+        <li><a href="../index.htm" tppabs="https://xin/index.shtml" id="nav_index">首页</a></li>
+        <li><a href="../invest.shtml.htm" tppabs="https://xin/invest.shtml" id="nav_invest">投资<i class="arrow"></i></a>
         <ul>
-        <li><a href="2.0/calculator.html#finvest"  target="_blank">投资计算器</a></li>
-        <li><a href="finacing.html" id="finacing" >我要融资</a></li>
+        <li><a href="../2.0/calculator.html#finvest" tppabs="https://xin/2.0/calculator.html#finvest" target="_blank">投资计算器</a></li>
         </ul>
         </li>
-        <li><a href="2.0/action/xr_huahua/huahua.shtml.htm"  id="nav_huahua">信融花花<i class="arrow"></i></a>
+        <li><a href="../2.0/action/xr_huahua/huahua.shtml.htm" tppabs="https://xin/2.0/action/xr_huahua/huahua.shtml" id="nav_huahua">信融花花<i class="arrow"></i><b class="hh_icon"><img src="../2.0/images/hh_icon.png" tppabs="https://xin/2.0/images/hh_icon.png" /></b></a>
           <ul>
-          	<li><a href="2.0/action/xr_huahua/huahua.shtml.htm"  target="_blank">我要借款</a></li>
-            <li><a href="2.0/calculator.html"  target="_blank">借款计算器</a></li>
+            <li><a href="../2.0/action/xr_huahua/huahua.shtml.htm" tppabs="https://xin/2.0/action/xr_huahua/huahua.shtml" target="_blank">我要借款</a></li>
+            <li><a href="../2.0/calculator.html" tppabs="https://xin/2.0/calculator.html" target="_blank">借款计算器</a></li>
           </ul>
         </li>
-        <li><a href="2.0/views/about/invest_help.shtml.htm"  id="nav_invest_help">新手指引<i class="arrow"></i></a>
+        <li><a href="../2.0/views/about/invest_help.shtml.htm" tppabs="https://xin/2.0/views/about/invest_help.shtml" id="nav_invest_help">新手指引<i class="arrow"></i></a>
           <ul>
-          	<li><a href="2.0/views/about/invest_help.shtml.htm"  target="_blank">投资帮助</a></li>
-          	<li><a href="2.0/views/about/risk.shtml.htm"  target="_blank">风险控制</a></li>
-            <li><a href="2.0/views/about/laws_regulations.shtml.htm#navLaws"  target="_blank">法律法规</a></li>
+            <li><a href="../2.0/views/about/invest_help.shtml.htm" tppabs="https://xin/2.0/views/about/invest_help.shtml" target="_blank">投资帮助</a></li>
+          	<li><a href="../2.0/views/about/risk.shtml.htm" tppabs="https://xin/2.0/views/about/risk.shtml" target="_blank">风险控制</a></li>
+            <li><a href="../2.0/views/about/laws_regulations.shtml.htm#navLaws" tppabs="https://xin/2.0/views/about/laws_regulations.shtml#navLaws" target="_blank">法律法规</a></li>
           </ul>
         </li>
-        <li><a href="2.0/views/about/about.shtml.htm"  id="nav_about">信息披露<i class="arrow"></i></a>
+        <li><a href="../2.0/views/about/about.shtml.htm" tppabs="https://xin/2.0/views/about/about.shtml">信息披露<i class="arrow"></i></a>
           <ul>
-            <li><a href="2.0/views/about/about.shtml.htm"  id="nav_about_index">公司简介</a></li>
-            <li><a href="2.0/views/about/team.shtml.htm" >团队介绍</a></li>
-            <li><a href="2.0/views/about/service_data.shtml.htm" >运营数据</a></li>
-            <li><a href="2.0/views/about/partner.shtml.htm" >合作机构</a></li>
+            <li><a href="../2.0/views/about/about.shtml.htm" tppabs="https://xin/2.0/views/about/about.shtml" id="nav_about_index">公司简介</a></li>
+            <li><a href="../2.0/views/about/team.shtml.htm" tppabs="https://xin/2.0/views/about/team.shtml">团队介绍</a></li>
+            <li><a href="../2.0/views/about/service_data.shtml.htm" tppabs="https://xin/2.0/views/about/service_data.shtml">运营数据</a></li>
+            <li><a href="../2.0/views/about/partner.shtml.htm" tppabs="https://xin/2.0/views/about/partner.shtml">合作机构</a></li>
           </ul>
         </li>
       </ul>
-      <div class="nav_r"><a href="2.0/vip.html"  id="nav_vip">VIP特权</a></div>
+      <div class="nav_r"><a href="../2.0/vip.html" tppabs="https://xin/2.0/vip.html" id="nav_vip">VIP特权</a></div>
     </div>
   </div>
 </div>
@@ -355,21 +367,21 @@ $(function(){
 
 <style type="text/css">.side-nav #side-nav-zz b.iconReward{ width:26px; height:18px; 	background-image: url("../2.0/images/account/reward/prise.png"/*tpa=https://xin/2.0/images/account/reward/prise.png*//*tpa=https://xin/2.0/images/account/reward/prise.png*/);display:inline-block; margin:0 0 5px 5px;}</style>
 <div class="side-nav g-well g-left">
-    <h3><a id="side-nav-index" class="item" href="../2.0/views/account/account_index.shtml.htm" >账户首页</a></h3>
-    <h3><a id="side-nav-xcb" class="item xcb" href="../2.0/xincunbao.shtml.htm" >信 存 宝<i>R</i></a></h3>
-    <h3><a id="side-nav-invest" class="item" href="invest.htm" >投资管理</a></h3>
-    <h3><a id="side-nav-borrowing"  class="item borrowing" href="../2.0/views/huahua/huahua.html" >信融花花</a></h3>
-    <h3 style="display:none"><a id="side-nav-cash" class="item" href="recharge.htm" >充值提现</a></h3>
-    <h3><a id="side-nav-consume" class="item current" href="consume.htm" >收支查询</a></h3>
-    <h3><a id="side-nav-setting" class="item" href="../2.0/views/account/account_settings.shtml.htm" >账户设置</a></h3>
-    <h3 ><a id="side-nav-msg" class="item" href="msg.htm" >我的消息</a></h3>
+    <h3><a id="side-nav-index" class="item" href="../2.0/views/account/account_index.shtml.htm" tppabs="https://xin/2.0/views/account/account_index.shtml">账户首页</a></h3>
+    <h3><a id="side-nav-xcb" class="item xcb" href="../2.0/xincunbao.shtml.htm" tppabs="https://xin/2.0/xincunbao.shtml">信 存 宝<i>R</i></a></h3>
+    <h3><a id="side-nav-invest" class="item current" href="invest.htm" tppabs="https://xin/my/invest">投资管理</a></h3>
+    <h3><a id="side-nav-borrowing"  class="item borrowing" href="../2.0/views/huahua/huahua.html" tppabs="https://xin/2.0/views/huahua/huahua.html">信融花花</a></h3>
+    <h3 style="display:none"><a id="side-nav-cash" class="item" href="recharge.htm" tppabs="https://xin/my/recharge">充值提现</a></h3>
+    <h3><a id="side-nav-consume" class="item" href="consume.htm" tppabs="https://xin/my/consume">收支查询</a></h3>
+    <h3><a id="side-nav-setting" class="item" href="../2.0/views/account/account_settings.shtml.htm" tppabs="https://xin/2.0/views/account/account_settings.shtml">账户设置</a></h3>
+    <h3 ><a id="side-nav-msg" class="item" href="msg.htm" tppabs="https://xin/my/msg">我的消息</a></h3>
 </div>        <div class="main-section g-right">
             <div class="g-mod g-well income-stats" style="background-color: #fff;">
     <h3 class="greet" style="padding-left: 0px;padding-top: 0px;padding-bottom: 10px;font-family: arial;">
         下午好，！
     </h3>
     
-    <div class="ui-tip info" style="color:#999;">实收收益中已扣除投资服务费 <a href="../2.0/views/about/help.shtml-tab=tab3&href=c1.htm"  class="blue" target="_blank">细则</a></div>
+    <div class="ui-tip info" style="color:#999;">实收收益中已扣除投资服务费 <a href="../2.0/views/about/help.shtml-tab=tab3&href=c1.htm" tppabs="https://xin/2.0/views/about/help.shtml?tab=tab3&href=c1" class="blue" target="_blank">细则</a></div>
    
    	<div style="margin-left: 15px;">
    		<div style="margin-top: 15px;">
@@ -415,7 +427,7 @@ $(function(){
 	   	</div>
 	   	
 	   	<div style="margin-top: 20px;">
-	   		<span style="font-weight: bold;">您在信融财富已累计获得 <font color="red" id="all">500</font> 元收益 !<span class="invest_msg"><img src="../s/images/info.png"  /><span class="i-title"><b><img src="../2.0/images/bicon.png" ></b>不包含投资未回款收益</span></span></span>
+	   		<span style="font-weight: bold;">您在信融财富已累计获得 <font color="red" id="all">500</font> 元收益 !<span class="invest_msg"><img src="../s/images/info.png" tppabs="https://xin/s/images/info.png" /><span class="i-title"><b><img src="../2.0/images/bicon.png" tppabs="https://xin/2.0/images/bicon.png"></b>不包含投资未回款收益</span></span></span>
 	   	</div>
    	</div>
 </div>            <div class="g-mod all-invests">
@@ -492,12 +504,12 @@ $(function(){
             </table>
             <div class="section">
                 <p>担保方：<span class="company-name"></span> <a href="#" class="blue company-intro" target="_blank">公司介绍</a></p>
-                <p>违约代偿方式：VIP会员逾期下一工作日全额本息代偿，普通用户逾期30日后全额本息代偿。 <a href="../help/faq/2.htm#8"  class="blue" target="_blank">查看细则</a></p>
+                <p>违约代偿方式：VIP会员逾期下一工作日全额本息代偿，普通用户逾期30日后全额本息代偿。 <a href="../help/faq/2.htm#8" tppabs="https://xin/help/faq/2#8" class="blue" target="_blank">查看细则</a></p>
             </div>
         </div>
         <div class="serve-intro">
             <h4>服务简介</h4>
-            <p class="ti bk">信<i class="g-dian">·</i>无忧贷是信融财富为投资人和融资方打造的投融资中介服务。该服务以投资人利益为出发点，力争为投资人提供一款有安全保障、省时省心、且收益可观的服务旗舰品。信<span class="g-dian">·</span>无忧贷作为服务提供方，负责协调融资方、投资人以及担保方，并作为见证方见证以上各方的投融资和担保行为。  <a href="../about/introduction.htm"  class="more blue" target="_blank">了解更多></a></p>
+            <p class="ti bk">信<i class="g-dian">·</i>无忧贷是信融财富为投资人和融资方打造的投融资中介服务。该服务以投资人利益为出发点，力争为投资人提供一款有安全保障、省时省心、且收益可观的服务旗舰品。信<span class="g-dian">·</span>无忧贷作为服务提供方，负责协调融资方、投资人以及担保方，并作为见证方见证以上各方的投融资和担保行为。  <a href="../about/introduction.htm" tppabs="https://xin/about/introduction" class="more blue" target="_blank">了解更多></a></p>
         </div>
     </div>
 </div>
@@ -531,7 +543,7 @@ $(function(){
                     <p>（收益的<span class="rate"></span>%）</p>
                                         <span class="ui-tip info">
                         开通VIP可降至<span class="hl">0%~<span class="vipRate"></span>%</span>
-                        <a href="../2.0/vip.html"  class="blue" target="_blank">详情</a>
+                        <a href="../2.0/vip.html" tppabs="https://xin/2.0/vip.html" class="blue" target="_blank">详情</a>
                     </span>
                                     </td>
             </tr>
@@ -566,7 +578,7 @@ $(function(){
     	<div class="ui-form-line" style="margin-top:6px;">
     		<label for="safepass" class="ui-form-label" >交易密码：</label>
     		<input type="password" name="safepass" id="ip_trade_pass" class="ui-form-input" style="width: 120px;" maxlength="16"  autocomplete="off"/>
-	        <a href="../2.0/views/account/back_password.shtml-tab=2.htm"  class="blue" target="_blank">忘记交易密码？</a>
+	        <a href="../2.0/views/account/back_password.shtml-tab=2.htm" tppabs="https://xin/2.0/views/account/back_password.shtml?tab=2" class="blue" target="_blank">忘记交易密码？</a>
 	        <div class="ui-tip" id="error_tip" style="margin-left:75px;"></div>
         </div>
 	   
@@ -705,7 +717,7 @@ $(function(){
     <li class="w02">投资时获得积分：<span id="loanScore">-</span>分</li>
 	<li>本金总额：<font  class="red" id="trans_detail_all_money"></font> 元</li>
 	<li>已收回本金额：<font class="red" id="trans_detail_back_money" style="color: #999;">全部到账后查看</font></li>
-    <li class="w02 gray">vip等级越高，积分价值越高 <a href="../gift-flag=vipChangeInfo.htm#gift_type_4"  class="red">兑换礼金></a></li>
+    <li class="w02 gray">vip等级越高，积分价值越高 <a href="../gift-flag=vipChangeInfo.htm#gift_type_4" tppabs="https://xin/gift?flag=vipChangeInfo#gift_type_4" class="red">兑换礼金></a></li>
 	<div class="clear"></div>
 </ul>
 <ul class="bor">
@@ -738,10 +750,10 @@ $(function(){
 <div class="main">
 <div class="footer_about left">
 <ul>
-<li><h2><a href="2.0/views/about/about.shtml.htm"  target="_blank">关于我们</a></h2><p><a href="2.0/views/about/team.shtml.htm"  target="_blank">团队介绍</a></p><p><a href="2.0/views/about/xr_history.shtml.htm"  target="_blank">发展历程</a></p><p><a href="2.0/views/about/xr_credit.shtml.htm" target="_blank">资质荣誉</a></p><p><a href="2.0/views/about/partner.shtml.htm"  target="_blank">合作机构</a></p></li>
-<li><h2><a href="2.0/views/about/help.shtml.htm"  target="_blank">帮助中心</a></h2><p><a href="2.0/views/about/guide/guide1.shtml.htm"  target="_blank">新手指引</a></p><p><a href="2.0/views/about/help.shtml-tab=tab1.htm"  target="_blank">问题答疑</a></p><p><a href="2.0/views/about/help.shtml-tab=tab10.htm"  target="_blank">投资攻略</a></p><p><a href="javascript:if(confirm('http://bbs.xinrong.com/forum-49-1.html  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ�����ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://bbs.xinrong.com/forum-49-1.html'"  target="_blank">意见反馈</a></p></li>
-<li><h2><a href="2.0/views/about/about.shtml.htm"  target="_blank">信息中心</a></h2><p><a href="2.0/views/about/xr_announcement.shtml.htm"  target="_blank">平台公告</a></p><p><a href="2.0/views/about/media_report.shtml.htm"  target="_blank">媒体报道</a></p><p><a href="2.0/views/about/activitysum.shtml.htm"  target="_blank">信融点滴</a></p><p><a href="javascript:if(confirm('http://bbs.xinrong.com/forum.php  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ�����ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://bbs.xinrong.com/forum.php'"  target="_blank">社 区</a></p></li>
-<li><h2>产品体系</h2><p><a href="2.0/vip.html"  target="_blank">VIP特权</a></p><p><a href="action/jf.htm"  target="_blank">抽奖</a></p></li>
+<li><h2><a href="../2.0/views/about/about.shtml.htm" tppabs="https://xin/2.0/views/about/about.shtml" target="_blank">关于我们</a></h2><p><a href="../2.0/views/about/team.shtml.htm" tppabs="https://xin/2.0/views/about/team.shtml" target="_blank">团队介绍</a></p><p><a href="../2.0/views/about/xr_history.shtml.htm" tppabs="https://xin/2.0/views/about/xr_history.shtml" target="_blank">发展历程</a></p><p><a href="../2.0/views/about/xr_credit.shtml.htm" tppabs="https://xin/2.0/views/about/xr_credit.shtml" target="_blank">资质荣誉</a></p><p><a href="../2.0/views/about/partner.shtml.htm" tppabs="https://xin/2.0/views/about/partner.shtml" target="_blank">合作机构</a></p></li>
+<li><h2><a href="../2.0/views/about/help.shtml.htm" tppabs="https://xin/2.0/views/about/help.shtml" target="_blank">帮助中心</a></h2><p><a href="../2.0/views/about/guide/guide1.shtml.htm" tppabs="https://xin/2.0/views/about/guide/guide1.shtml" target="_blank">新手指引</a></p><p><a href="../2.0/views/about/help.shtml-tab=tab1.htm" tppabs="https://xin/2.0/views/about/help.shtml?tab=tab1" target="_blank">问题答疑</a></p><p><a href="../2.0/views/about/help.shtml-tab=tab10.htm" tppabs="https://xin/2.0/views/about/help.shtml?tab=tab10" target="_blank">投资攻略</a></p><p><a href="javascript:if(confirm('http://bbs.xinrong.com/forum-49-1.html  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ�����ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://bbs.xinrong.com/forum-49-1.html'" tppabs="http://bbs.xinrong.com/forum-49-1.html" target="_blank">意见反馈</a></p></li>
+<li><h2><a href="../2.0/views/about/about.shtml.htm" tppabs="https://xin/2.0/views/about/about.shtml" target="_blank">信息中心</a></h2><p><a href="../2.0/views/about/xr_announcement.shtml.htm" tppabs="https://xin/2.0/views/about/xr_announcement.shtml" target="_blank">平台公告</a></p><p><a href="../2.0/views/about/media_report.shtml.htm" tppabs="https://xin/2.0/views/about/media_report.shtml" target="_blank">媒体报道</a></p><p><a href="../2.0/views/about/activitysum.shtml.htm" tppabs="https://xin/2.0/views/about/activitysum.shtml" target="_blank">信融点滴</a></p><p><a href="javascript:if(confirm('http://bbs.xinrong.com/forum.php  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ�����ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://bbs.xinrong.com/forum.php'" tppabs="http://bbs.xinrong.com/forum.php" target="_blank">社 区</a></p></li>
+<li><h2>产品体系</h2><p><a href="../2.0/vip.html" tppabs="https://xin/2.0/vip.html" target="_blank">VIP特权</a></p></p><p><a href="../action/jf.htm" tppabs="https://xin/action/jf" target="_blank">抽奖</a></p></li>
 </ul>
 </div>
 <div class="footer_contact left">
@@ -752,34 +764,34 @@ $(function(){
 <div class="con_pic">
 <ul>
 <li class="fb01"><a href="javascript:void(0)"><i class="AllIcon icon01"></i></a>
-<ul class="weix_box"><b></b><li><p><img src="../s/img/w02.jpg"  width="100"></p><h4>关注服务号</h4></li><li><p><img src="../s/img/w05.jpg"  width="100"></p><h4>关注订阅号</h4></li><li><p><img src="../s/img/w06.jpg"  width="100"></p><h4>微信客服-小薇</h4></ul>
+<ul class="weix_box"><b></b><li><p><img src="../s/img/w02.jpg" tppabs="https://xin/s/img/w02.jpg" width="100"></p><h4>关注服务号</h4></li><li><p><img src="../s/img/w05.jpg" tppabs="https://xin/s/img/w05.jpg" width="100"></p><h4>关注订阅号</h4></li><li><p><img src="../s/img/w06.jpg" tppabs="https://xin/s/img/w06.jpg" width="100"></p><h4>微信客服-小薇</h4></ul>
 </li>
-<li class="fb02"><a href="javascript:if(confirm('http://crm2.qq.com/page/portalpage/wpa.php?uin=4007779888&f=1&ty=1&aty=0&a=&from=5  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ�����ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://crm2.qq.com/page/portalpage/wpa.php?uin=4007779888&f=1&ty=1&aty=0&a=&from=5'"  title="在线咨询" target="_blank"><i class="AllIcon icon02"></i></a>
+<li class="fb02"><a href="javascript:if(confirm('http://crm2.qq.com/page/portalpage/wpa.php?uin=4007779888&f=1&ty=1&aty=0&a=&from=5  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ�����ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://crm2.qq.com/page/portalpage/wpa.php?uin=4007779888&f=1&ty=1&aty=0&a=&from=5'" tppabs="http://crm2.qq.com/page/portalpage/wpa.php?uin=4007779888&f=1&ty=1&aty=0&a=&from=5" title="在线咨询" target="_blank"><i class="AllIcon icon02"></i></a>
 <ul class="weix_box qq_box">
-<li><b></b><p><img src="../2.0/images/qq.png"  width="120"></p><h4>QQ号：4007779888</h4></li>
+<li><b></b><p><img src="../2.0/images/qq.png" tppabs="https://xin/2.0/images/qq.png" width="120"></p><h4>QQ号：4007779888</h4></li>
 </ul></li>
-<li class="fb03"><a href="javascript:if(confirm('http://weibo.com/u/2719695463?profile_ftype=1&is_all=1  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ�����ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://weibo.com/u/2719695463?profile_ftype=1&is_all=1#_0'"  target="_blank" title="微博"><i class="AllIcon icon03"></i></a></li>
+<li class="fb03"><a href="javascript:if(confirm('http://weibo.com/u/2719695463?profile_ftype=1&is_all=1  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ�����ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://weibo.com/u/2719695463?profile_ftype=1&is_all=1#_0'" tppabs="http://weibo.com/u/2719695463?profile_ftype=1&is_all=1#_0" target="_blank" title="微博"><i class="AllIcon icon03"></i></a></li>
 </ul>
 </div>
 </div>
 <div class="footer_app right">
-  <img src="../s/img/w07.jpg"  width="122" class="bimg" /><h2>下载手机客户端<i class="AllIcon icon01"></i> <i class="AllIcon icon02"></i></h2> </div>
+  <img src="../s/img/w07.jpg" tppabs="https://xin/s/img/w07.jpg" width="122" class="bimg" /><h2>下载手机客户端<i class="AllIcon icon01"></i> <i class="AllIcon icon02"></i></h2> </div>
 <div class="black10"></div>
 </div>
 </div><!--end-->
 <div class="clear"></div>
 <div class="footer_pic">
 <ul>
-<li><a target="_blank" href="javascript:if(confirm('http://szcert.ebs.org.cn/33a832e2-fa27-42e2-b593-f8eca324fd86  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ�����ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://szcert.ebs.org.cn/33a832e2-fa27-42e2-b593-f8eca324fd86'" title="深圳市市场监督管理局企业主体身份公示"><i class="icon01"></i></a></li>
-<li><a target="_blank" href="javascript:if(confirm('https://trustsealinfo.websecurity.norton.com/splash?form_file=fdf%2Fsplash.fdf&sap=&dn=xin&zoneoff=&lang=zh_CN  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ�����ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://trustsealinfo.websecurity.norton.com/splash?form_file=fdf%2Fsplash.fdf&sap=&dn=xin&zoneoff=&lang=zh_CN'"  title="信融财富是中国第一家引入VeriSign 256位SSL加密的融资理财平台。您的隐私及个人资料安全已受最高级别的保护。"><i class="icon03"></i></a></li>
-<li><a target="_blank" href="javascript:if(confirm('http://www.itrust.org.cn/home/index/rz_certifi/wm/RZ2017082401  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ�����ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.itrust.org.cn/home/index/rz_certifi/wm/RZ2017082401'"  title="中国信用企业"><i class="icon02"></i></a></li>
-<li><a target="_blank" href="javascript:if(confirm('https://search.szfw.org/cert/l/CX20140805008628008716  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ�����ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://search.szfw.org/cert/l/CX20140805008628008716'"  title="诚信网站"><i class="icon04"></i></a></li>
+<li><a target="_blank" href="javascript:if(confirm('http://szcert.ebs.org.cn/33a832e2-fa27-42e2-b593-f8eca324fd86  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ�����ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://szcert.ebs.org.cn/33a832e2-fa27-42e2-b593-f8eca324fd86'" tppabs="http://szcert.ebs.org.cn/33a832e2-fa27-42e2-b593-f8eca324fd86" title="深圳市市场监督管理局企业主体身份公示"><i class="icon01"></i></a></li>
+<li><a target="_blank" href="javascript:if(confirm('https://trustsealinfo.websecurity.norton.com/splash?form_file=fdf%2Fsplash.fdf&sap=&dn=xin&zoneoff=&lang=zh_CN  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ�����ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://trustsealinfo.websecurity.norton.com/splash?form_file=fdf%2Fsplash.fdf&sap=&dn=xin&zoneoff=&lang=zh_CN'" tppabs="https://trustsealinfo.websecurity.norton.com/splash?form_file=fdf%2Fsplash.fdf&sap=&dn=xin&zoneoff=&lang=zh_CN" title="信融财富是中国第一家引入VeriSign 256位SSL加密的融资理财平台。您的隐私及个人资料安全已受最高级别的保护。"><i class="icon03"></i></a></li>
+<li><a target="_blank" href="javascript:if(confirm('http://www.itrust.org.cn/home/index/rz_certifi/wm/RZ2017082401  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ�����ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.itrust.org.cn/home/index/rz_certifi/wm/RZ2017082401'" tppabs="http://www.itrust.org.cn/home/index/rz_certifi/wm/RZ2017082401" title="中国信用企业"><i class="icon02"></i></a></li>
+<li><a target="_blank" href="javascript:if(confirm('https://search.szfw.org/cert/l/CX20140805008628008716  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ�����ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://search.szfw.org/cert/l/CX20140805008628008716'" tppabs="https://search.szfw.org/cert/l/CX20140805008628008716" title="诚信网站"><i class="icon04"></i></a></li>
 <li><a title="腾讯云安全认证"><i class="icon05"></i></a></li>
-<li><a target="_blank" href="javascript:if(confirm('http://v.pinpaibao.com.cn/authenticate/cert/?site=xin&at=business  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ�����ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://v.pinpaibao.com.cn/authenticate/cert/?site=xin&at=business'"  title="安全联盟认证网站"><i class="icon06"></i></a></li>
+<li><a target="_blank" href="javascript:if(confirm('http://v.pinpaibao.com.cn/authenticate/cert/?site=xin&at=business  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ�����ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://v.pinpaibao.com.cn/authenticate/cert/?site=xin&at=business'" tppabs="http://v.pinpaibao.com.cn/authenticate/cert/?site=xin&at=business" title="安全联盟认证网站"><i class="icon06"></i></a></li>
 </ul>
 </div>
 <div class="clear"></div>
-<div class="footer_font main"><p> <a href="../about/privacy.htm"  target="_blank">隐私保护申明</a> 　|　 <a href="../about/agreement.htm" target="_blank">服务协议</a>　 |　 粤ICP备12020226号</p>Copyright Xinrong.com All Rights Reserved   信融财富投资管理有限公司</div>
+<div class="footer_font main"><p> <a href="../about/privacy.htm" tppabs="https://xin/about/privacy" target="_blank">隐私保护申明</a> 　|　 <a href="../about/agreement.htm" tppabs="https://xin/about/agreement" target="_blank">服务协议</a>　 |　 粤ICP备12020226号</p>Copyright Xinrong.com All Rights Reserved   信融财富投资管理有限公司</div>
 </div>
 
 <style>
@@ -895,14 +907,14 @@ $(function(){
 
 
 
-<script src="../s/vendor/artDialog/jquery.artDialog-min.js-v=1591" ></script>
-<script src="../s/vendor/artDialog/dialog_ex.js-v=1591" ></script>
-<script src="../s/js/biz/dlg_login-min.js-v=1591" ></script>
+<script src="../s/vendor/artDialog/jquery.artDialog-min.js-v=1591" tppabs="https://xin/s/vendor/artDialog/jquery.artDialog-min.js?v=1591"></script>
+<script src="../s/vendor/artDialog/dialog_ex.js-v=1591" tppabs="https://xin/s/vendor/artDialog/dialog_ex.js?v=1591"></script>
+<script src="../s/js/biz/dlg_login-min.js-v=1591" tppabs="https://xin/s/js/biz/dlg_login-min.js?v=1591"></script>
 <input type="hidden" id="login_redirect" value=""/>
 <script>AA.View.TopNav.init();</script>
 
 
-<script type="text/javascript" src="../2.0/js/channel.js" ></script> 
+<script type="text/javascript" src="../2.0/js/channel.js" tppabs="https://xin/2.0/js/channel.js"></script> 
 
 <script>
 var _hmt = _hmt || [];
@@ -923,14 +935,15 @@ var _hmt = _hmt || [];
 
 
 
-<script src="../s/vendor/datepicker/WdatePicker.js-v=1591" ></script>
-<script src="../s/js/widget/datagrid-min.js-v=1591" ></script>
-<script src="../s/js/widget/pagination-min.js-v=1591" ></script>
-<script src="../s/js/www/user-min.js-v=1591" ></script>
-<script src="../s/js/v2/user/trans.js-v=1591" ></script>
-<script src="../s/js/v2/user/refund_plan.js-v=1591" ></script>
-<script src="../s/js/v2/user/trans_detail.js-v=1591" ></script>
+<script src="../s/vendor/datepicker/WdatePicker.js-v=1591" tppabs="https://xin/s/vendor/datepicker/WdatePicker.js?v=1591"></script>
+<script src="../s/js/widget/datagrid-min.js-v=1591" tppabs="https://xin/s/js/widget/datagrid-min.js?v=1591"></script>
+<script src="../s/js/widget/pagination-min.js-v=1591" tppabs="https://xin/s/js/widget/pagination-min.js?v=1591"></script>
+<script src="../s/js/www/user-min.js-v=1591" tppabs="https://xin/s/js/www/user-min.js?v=1591"></script>
+<script src="../s/js/v2/user/trans.js-v=1591" tppabs="https://xin/s/js/v2/user/trans.js?v=1591"></script>
+<script src="../s/js/v2/user/refund_plan.js-v=1591" tppabs="https://xin/s/js/v2/user/refund_plan.js?v=1591"></script>
+<script src="../s/js/v2/user/trans_detail.js-v=1591" tppabs="https://xin/s/js/v2/user/trans_detail.js?v=1591"></script>
 <script>AA.User.Invest.init();</script>
 </body>
 </html>
- 
+  </body>
+</html>

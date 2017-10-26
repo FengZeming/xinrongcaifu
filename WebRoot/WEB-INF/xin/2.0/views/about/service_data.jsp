@@ -9,18 +9,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>信融财富</title>
-<link href="../../css/about.css" tppabs="https://xin/2.0/css/about.css" rel="stylesheet" type="text/css" />
-<link href="../../css/service_data.css" tppabs="https://xin/2.0/css/service_data.css" rel="stylesheet" type="text/css" />
-<link href="../../css/basic.css" tppabs="https://xin/2.0/css/basic.css" rel="stylesheet" type="text/css" />
-<link href="../../css/dialog.css" tppabs="https://xin/2.0/css/dialog.css" rel="stylesheet" type="text/css" />
-<link href="../../css/global.css" tppabs="https://xin/2.0/css/global.css" rel="stylesheet" type="text/css" />
-<link href="../../css/dialog-wbox.css" tppabs="https://xin/2.0/css/dialog-wbox.css" rel="stylesheet" type="text/css" />
-<!--<script>if(top.location!=self.location){top.location.replace(self.location);}</script>
-<script>if('https:' != location.protocol){location = location.href.replace('http:','https:');}</script>-->
-<!--[if IE 6]><script>document.execCommand("BackgroundImageCache", false, true);</script><![endif]-->
-<!-- <script type="text/javascript" src="/2.0/js/jquery-1.10.2.min.js"></script> -->
-<!-- <script type="text/javascript" src="../../js/jquery-1.4.2.js" tppabs="https://xin/2.0/js/jquery-1.4.2.js"></script> -->
-<script type="text/javascript" src="../../js/jquery-1.10.2.js" tppabs="https://xin/2.0/js/jquery-1.10.2.js"></script>
+<link href="../../css/about.css"  rel="stylesheet" type="text/css" />
+<link href="../../css/service_data.css"  rel="stylesheet" type="text/css" />
+<link href="../../css/basic.css"  rel="stylesheet" type="text/css" />
+<link href="../../css/dialog.css"  rel="stylesheet" type="text/css" />
+<link href="../../css/global.css"  rel="stylesheet" type="text/css" />
+<link href="../../css/dialog-wbox.css"  rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="../../js/jquery-1.10.2.js" ></script>
 <script type="text/javascript">
 var G_ENV_VAR = {
 	WWW:'',
@@ -37,21 +33,21 @@ var G_ENV_VAR = {
 	IS_CHECKED_BANKCARD: 'false'
 };
 </script>
-<script type="text/javascript" src="../../../s/vendor/artDialog/jquery.artDialog.js" tppabs="https://xin/s/vendor/artDialog/jquery.artDialog.js"></script>
-<script type="text/javascript" src="../../js/tytabs.jquery.new.js" tppabs="https://xin/2.0/js/tytabs.jquery.new.js"></script>
-<script type="text/javascript" src="../../js/jquery.imgscroll.min.js" tppabs="https://xin/2.0/js/jquery.imgscroll.min.js"></script>
-<script src="../../js/jquery-webox.js" tppabs="https://xin/2.0/js/jquery-webox.js" type="text/jscript"></script>
-<script type="text/javascript" src="../../js/wbox.js" tppabs="https://xin/2.0/js/wbox.js"></script>
-<script type="text/javascript" src="../../js/vendor/echarts/build/dist/echarts.js" tppabs="https://xin/2.0/js/vendor/echarts/build/dist/echarts.js"></script>
-<script type="text/javascript" src="../../js/vendor/animateNumber/jquery.animateNumber.js" tppabs="https://xin/2.0/js/vendor/animateNumber/jquery.animateNumber.js"></script>
-<script type="text/javascript" src="../../js/AA.base-min.js" tppabs="https://xin/2.0/js/AA.base-min.js"></script>
-<script type="text/javascript" src="../../js/XR.base.js" tppabs="https://xin/2.0/js/XR.base.js"></script>
-<script type="text/javascript" src="../../js/mod/login.js" tppabs="https://xin/2.0/js/mod/login.js"></script>
-<script type="text/javascript" src="../../js/common.js" tppabs="https://xin/2.0/js/common.js"></script>
-<script type="text/javascript" src="../../js/date.js" tppabs="https://xin/2.0/js/date.js"></script>
-<script type="text/javascript" src="../../js/api/common_api.js" tppabs="https://xin/2.0/js/api/common_api.js"></script>
-<script type="text/javascript" src="../../js/api/user_api.js" tppabs="https://xin/2.0/js/api/user_api.js"></script>
-<script type="text/javascript" src="../../../webapp2.0/js/jquery.circliful.min.js" tppabs="https://xin/webapp2.0/js/jquery.circliful.min.js"></script>
+<script type="text/javascript" src="../../../s/vendor/artDialog/jquery.artDialog.js" ></script>
+<script type="text/javascript" src="../../js/tytabs.jquery.new.js" ></script>
+<script type="text/javascript" src="../../js/jquery.imgscroll.min.js" ></script>
+<script src="../../js/jquery-webox.js"  type="text/jscript"></script>
+<script type="text/javascript" src="../../js/wbox.js" ></script>
+<script type="text/javascript" src="../../js/vendor/echarts/build/dist/echarts.js" ></script>
+<script type="text/javascript" src="../../js/vendor/animateNumber/jquery.animateNumber.js" ></script>
+<script type="text/javascript" src="../../js/AA.base-min.js" ></script>
+<script type="text/javascript" src="../../js/XR.base.js" ></script>
+<script type="text/javascript" src="../../js/mod/login.js" ></script>
+<script type="text/javascript" src="../../js/common.js" ></script>
+<script type="text/javascript" src="../../js/date.js" ></script>
+<script type="text/javascript" src="../../js/api/common_api.js" ></script>
+<script type="text/javascript" src="../../js/api/user_api.js" ></script>
+<script type="text/javascript" src="../../../webapp2.0/js/jquery.circliful.min.js" ></script>
 </head>
 <style>
 .hmenu_nav{ position: fixed; z-index: 100; top: 0px; left:0px;}
@@ -74,46 +70,46 @@ $(function(){
 </script>
 <div class="hmenu_nav">
   <div class="main PositionR">
-    <div class="logo left PositionR"><a href="../../../index.htm" tppabs="https://xin/index.shtml"><img src="../../images/logo.gif" tppabs="https://xin/2.0/images/logo.gif" /></a><a href="shareholder.shtml.htm" tppabs="https://xin/2.0/views/about/shareholder.shtml" class="logo_font">上市公司系</a></div>
-    <div class="right top_my"><a href="../account/account_index.shtml.htm" tppabs="https://xin/2.0/views/account/account_index.shtml" class="f-my" id="nav_my">我的账户</a> <a id="top_exit" href="javascript:AA.RapidLogin.loginout();" class="f_exit" style="display:none;">退出</a> <span class="h-login-reg h-login" style="display: none;"><i></i><a href="../../login2.0.html" tppabs="https://xin/2.0/login2.0.html" class="flogin">登录</a><a href="../account/register4.0.shtml.htm" tppabs="https://xin/2.0/views/account/register4.0.shtml" class="freg">注册</a></span></div>
+    <div class="logo left PositionR"><a href="../../../index.htm" ><img src="../../images/logo.gif"  /></a><a href="shareholder.shtml.htm"  class="logo_font">上市公司系</a></div>
+    <div class="right top_my"><a href="../account/account_index.shtml.htm"  class="f-my" id="nav_my">我的账户</a> <a id="top_exit" href="javascript:AA.RapidLogin.loginout();" class="f_exit" style="display:none;">退出</a> <span class="h-login-reg h-login" style="display: none;"><i></i><a href="../../login2.0.html" class="flogin">登录</a><a href="../account/register4.0.shtml.htm"  class="freg">注册</a></span></div>
     <div class="clear"></div>
   </div>
   <div class="h_nav" id="hmenu_nav">
     <div class="main PositionR">
       <ul>
-        <li><a href="../../../index.htm" tppabs="https://xin/index.shtml" id="nav_index">首页</a></li>
-        <li><a href="../../../invest.shtml.htm" tppabs="https://xin/invest.shtml" id="nav_invest">投资<i class="arrow"></i></a>
+        <li><a href="../../../index.htm"  id="nav_index">首页</a></li>
+        <li><a href="../../../invest.shtml.htm"  id="nav_invest">投资<i class="arrow"></i></a>
         <ul>
-        <li><a href="../../calculator.html#finvest" tppabs="https://xin/2.0/calculator.html#finvest" target="_blank">投资计算器</a></li>
+        <li><a href="../../calculator.html#finvest"  target="_blank">投资计算器</a></li>
         </ul>
         </li>
-        <li><a href="../../action/xr_huahua/huahua.shtml.htm" tppabs="https://xin/2.0/action/xr_huahua/huahua.shtml" id="nav_huahua">信融花花<i class="arrow"></i><b class="hh_icon"><img src="../../images/hh_icon.png" tppabs="https://xin/2.0/images/hh_icon.png" /></b></a>
+        <li><a href="../../action/xr_huahua/huahua.shtml.htm"  id="nav_huahua">信融花花<i class="arrow"></i><b class="hh_icon"><img src="../../images/hh_icon.png"  /></b></a>
           <ul>
-          	<li><a href="../../action/xr_huahua/huahua.shtml.htm" tppabs="https://xin/2.0/action/xr_huahua/huahua.shtml" target="_blank">我要借款</a></li>
-            <li><a href="../../calculator.html" tppabs="https://xin/2.0/calculator.html" target="_blank">借款计算器</a></li>
+          	<li><a href="../../action/xr_huahua/huahua.shtml.htm"  target="_blank">我要借款</a></li>
+            <li><a href="../../calculator.html"  target="_blank">借款计算器</a></li>
           </ul>
         </li>
        
-        <li><a href="invest_help.shtml.htm" tppabs="https://xin/2.0/views/about/invest_help.shtml" id="nav_invest_help">新手指引<i class="arrow"></i></a>
+        <li><a href="invest_help.shtml.htm"  id="nav_invest_help">新手指引<i class="arrow"></i></a>
           <ul>
-          	<li><a href="invest_help.shtml.htm" tppabs="https://xin/2.0/views/about/invest_help.shtml" target="_blank">投资帮助</a></li>
-          	<li><a href="risk.shtml.htm" tppabs="https://xin/2.0/views/about/risk.shtml" target="_blank">风险控制</a></li>
-            <li><a href="laws_regulations.shtml.htm#navLaws" tppabs="https://xin/2.0/views/about/laws_regulations.shtml#navLaws" target="_blank">法律法规</a></li>
+          	<li><a href="invest_help.shtml.htm"  target="_blank">投资帮助</a></li>
+          	<li><a href="risk.shtml.htm"  target="_blank">风险控制</a></li>
+            <li><a href="laws_regulations.shtml.htm#navLaws"  target="_blank">法律法规</a></li>
           
           </ul>
         </li>
-        <li><a href="about.shtml.htm" tppabs="https://xin/2.0/views/about/about.shtml" id="nav_about">信息披露<i class="arrow"></i></a>
+        <li><a href="about.shtml.htm" id="nav_about">信息披露<i class="arrow"></i></a>
           <ul>
-            <li><a href="about.shtml.htm" tppabs="https://xin/2.0/views/about/about.shtml" id="nav_about_index">公司简介</a></li>
-            <li><a href="team.shtml.htm" tppabs="https://xin/2.0/views/about/team.shtml">团队介绍</a></li>
-            <li><a href="service_data.shtml.htm" tppabs="https://xin/2.0/views/about/service_data.shtml">运营数据</a></li>
+            <li><a href="about.shtml.htm"  id="nav_about_index">公司简介</a></li>
+            <li><a href="team.shtml.htm" >团队介绍</a></li>
+            <li><a href="service_data.shtml.htm" >运营数据</a></li>
           
-            <li><a href="partner.shtml.htm" tppabs="https://xin/2.0/views/about/partner.shtml">合作机构</a></li>
+            <li><a href="partner.shtml.htm" >合作机构</a></li>
             
           </ul>
         </li>
       </ul>
-      <div class="nav_r"><a href="../../vip.html" tppabs="https://xin/2.0/vip.html" id="nav_vip">VIP特权</a></div>
+      <div class="nav_r"><a href="../../vip.html"  id="nav_vip">VIP特权</a></div>
     </div>
   </div>
 </div>
@@ -127,8 +123,8 @@ $(function(){
 .fengxian_dialog .fx_sub .sub02{ font-size:18px; width:166px; height:45px; line-height:45px;}
 .fengxian_dialog .fx_sub p a{ color:#a1a1a1; font-size:15px;}
 </style>
-<script type="text/javascript" src="../../js/wbox.js" tppabs="https://xin/2.0/js/wbox.js"></script>
-<link rel="stylesheet" href="../../css/dialog-wbox.css" tppabs="https://xin/2.0/css/dialog-wbox.css">
+<script type="text/javascript" src="../../js/wbox.js" ></script>
+
 <!--风险测评-->
 <div id="fxpc_dialog" style="display: none;">
   <div class="fengxian_dialog">
@@ -255,32 +251,32 @@ $(document).ready(function(){
 				<div class="section_detail detail_animating">
 					<ul>
 						<li>
-							<img src="../../images/about/data/section1_1.png" tppabs="https://xin/2.0/images/about/data/section1_1.png" />
+							<img src="../../images/about/data/section1_1.png"  />
 							<span><span id="all_money">--</span></span>
 							<span>交易总额</span>
 						</li>
 						<li>
-							<img src="../../images/about/data/section1_2.png" tppabs="https://xin/2.0/images/about/data//section1_2.png" />
+							<img src="../../images/about/data/section1_2.png"  />
 							<span><span id="all_retaining">--</span></span>
 							<span>待偿金额</span>
 						</li>
 						<li>
-							<img src="../../images/about/data/section1_3.png" tppabs="https://xin/2.0/images/about/data//section1_3.png" />
+							<img src="../../images/about/data/section1_3.png"  />
 							<span><span id="income_money">--</span></span>
 							<span>为投资人赚取的收益</span>
 						</li>
 						<li>
-							<img src="../../images/about/data/section1_4.png" tppabs="https://xin/2.0/images/about/data//section1_4.png" />
+							<img src="../../images/about/data/section1_4.png"  />
 							<span><span id="all_user">--</span>人</span>
 							<span>用户人数</span>
 						</li>
 						<li>
-							<img src="../../images/about/data/section1_5.png" tppabs="https://xin/2.0/images/about/data//section1_5.png" />
+							<img src="../../images/about/data/section1_5.png"  />
 							<span><span id="all_trade">--</span>笔</span>
 							<span>累计交易总笔数</span>
 						</li>
 						<li>
-							<img src="../../images/about/data/section1_6.png" tppabs="https://xin/2.0/images/about/data//section1_6.png" />
+							<img src="../../images/about/data/section1_6.png"  />
 							<span><span id="risk_money">--</span></span>
 							<span>风险准备金</span>
 						</li>
@@ -499,17 +495,17 @@ $(document).ready(function(){
 						-->
 						<ul class="user_data">
 							<li>
-								<img src="../../images/about/data/section4_1.png" tppabs="https://xin/2.0/images/about/data//section4_1.png" />
+								<img src="../../images/about/data/section4_1.png"  />
 								<span>人均累计投资金额 : <span id="per_capita_invest_money" class="orange">--</span>&nbsp;元</span>
 								<span>人均累计借款金额 : <span id="per_capita_borrow_money" class="orange">--</span>&nbsp;元</span>
 							</li>
 							<li>
-								<img src="../../images/about/data/section4_2.png" tppabs="https://xin/2.0/images/about/data//section4_2.png" />
+								<img src="../../images/about/data/section4_2.png"  />
 								<span>笔均投资金额 : <span id="per_portion_invest_money" class="orange">--</span>&nbsp;元</span>
 								<span>笔均借款金额 : <span id="per_portion_borrow_money" class="orange">--</span>&nbsp;元</span>
 							</li>
 							<li>
-								<img src="../../images/about/data/section4_3.png" tppabs="https://xin/2.0/images/about/data//section4_3.png" />
+								<img src="../../images/about/data/section4_3.png" />
 								<span>投资人数量 : <span id="investor_amount" class="orange">--</span>&nbsp;人</span>
 								<span>借款人数量 : <span id="borrower_amount" class="orange">--</span>&nbsp;人</span>
 							</li>
@@ -638,29 +634,29 @@ $(document).ready(function(){
 						<div class="view_1">
 							<span>金额逾期率(%)</span>
 							<span id="overDueMoneyRate_huahua">--</span>
-							<img src="../../images/about/data/section7_1.png" tppabs="https://xin/2.0/images/about/data//section7_1.png" style="top:10px"/>
+							<img src="../../images/about/data/section7_1.png"  style="top:10px"/>
 							<div style="position:absolute;bottom:-25px;right:82px;font-size:14px;color:#999">含金额坏账率</div>
 						</div>
 						<div class="view_2">
 							<span>金额坏账率(%)</span>
 							<span id="badRate_huahua">--</span>
-							<img src="../../images/about/data/section7_2.png" tppabs="https://xin/2.0/images/about/data//section7_2.png" />
+							<img src="../../images/about/data/section7_2.png"  />
 						</div>
 						<div class="view_3">
 							<span>累计逾期金额(元)</span>
 							<span id="overDueMoney_huahua">--</span>
-							<img src="../../images/about/data/section7_3.png" tppabs="https://xin/2.0/images/about/data//section7_3.png" style="top:10px"/>
+							<img src="../../images/about/data/section7_3.png"  style="top:10px"/>
 							<div style="position:absolute;bottom:-25px;right:82px;font-size:14px;color:#999">含坏账金额</div>
 						</div>
 						<div class="view_4">
 							<span>累计坏账金额(元)</span>
 							<span id="badMoney_huahua">--</span>
-							<img src="../../images/about/data/section7_4.png" tppabs="https://xin/2.0/images/about/data//section7_4.png" />
+							<img src="../../images/about/data/section7_4.png"  />
 						</div>
 						<div class="view_5">
 							<span>逾期黑名单(人)</span>
-							<span><span id="overDuePeople_huahua">--</span><a href="../../blacklist.html" tppabs="https://xin/2.0/blacklist.html">(查看黑名单)</a></span>
-							<img src="../../images/about/data/section7_5.png" tppabs="https://xin/2.0/images/about/data//section7_5.png" />
+							<span><span id="overDuePeople_huahua">--</span><a href="../../blacklist.html" >(查看黑名单)</a></span>
+							<img src="../../images/about/data/section7_5.png"  />
 						</div>
 					</div>
 					<h4 class="reminder">注：信融花花风险数据默认逾期M3以上进入逾期黑名单，默认连续逾期M3以上视为逾期，默认连续逾期M6以上为坏账。
@@ -724,7 +720,7 @@ $(document).ready(function(){
 								<span class="box_info_more">逾期项目数 : <span id="overdue_product">--</span>笔</span>
 							</li>
 						</ul>
-						<div class="explain"><a href="service_data_explain.html" tppabs="https://xin/2.0/views/about/service_data_explain.html" target="_blank">部分数据名词释义</a></div>
+						<div class="explain"><a href="service_data_explain.html"  target="_blank">部分数据名词释义</a></div>
 					</div>
 				</div>
 			</div>
@@ -761,10 +757,10 @@ $(document).ready(function(){
 									</thead>
 									<tbody>
 										<tr>
-											<td>1</td><td>xinrong</td><td>2000万元</td><td>2000万元</td><td>2000万元</td>
+											<td>1</td><td>xin</td><td>2000万元</td><td>2000万元</td><td>2000万元</td>
 										</tr>
 										<tr>
-											<td>2</td><td>xinrong</td><td>2000万元</td><td>2000万元</td><td>2000万元</td>
+											<td>2</td><td>xin</td><td>2000万元</td><td>2000万元</td><td>2000万元</td>
 										</tr>
 										
 									</tbody>
@@ -786,10 +782,10 @@ $(document).ready(function(){
 									</thead>
 									<tbody>
 										<tr>
-											<td>1</td><td>xinrong</td><td>2000万元</td><td>2000万元</td><td>2000万元</td>
+											<td>1</td><td>xin</td><td>2000万元</td><td>2000万元</td><td>2000万元</td>
 										</tr>
 										<tr>
-											<td>2</td><td>xinrong</td><td>2000万元</td><td>2000万元</td><td>2000万元</td>
+											<td>2</td><td>xin</td><td>2000万元</td><td>2000万元</td><td>2000万元</td>
 										</tr>
 									</tbody>
 								</table>
@@ -810,10 +806,10 @@ $(document).ready(function(){
 									</thead>
 									<tbody>
 										<tr>
-											<td>xinrong</td><td>123456789012345678</td><td>2000万元</td><td>2000万元</td><td>2000万元</td>
+											<td>xin</td><td>123456789012345678</td><td>2000万元</td><td>2000万元</td><td>2000万元</td>
 										</tr>
 										<tr>
-											<td>xinrong</td><td>123456789012345678</td><td>2000万元</td><td>2000万元</td><td>2000万元</td>
+											<td>xin</td><td>123456789012345678</td><td>2000万元</td><td>2000万元</td><td>2000万元</td>
 										</tr>
 									</tbody>
 								</table>
@@ -863,12 +859,12 @@ $(document).ready(function(){
             <div class="ui-form-line">
                 <label for="username" class="ui-form-label">账　号：</label>
                 <input type="text" name="username" id="rapid-userName" class="ui-form-input" maxlength="50" tabindex="1" placeholder="账户名 / Email / 手机号"/>
-                <a href="../account/register4.0.shtml.htm" tppabs="https://xin/2.0/views/account/register4.0.shtml" class="blue" target="_blank">注册账号</a>
+                <a href="../account/register4.0.shtml.htm"  class="blue" target="_blank">注册账号</a>
             </div>
             <div class="ui-form-line">
                 <label for="password" class="ui-form-label">密　码：</label>
                 <input type="password" name="password" id="rapid-userPw" class="ui-form-input" maxlength="16" tabindex="2" placeholder="登录密码"/>
-                <a href="../account/back_password.shtml.htm" tppabs="https://xin/2.0/views/account/back_password.shtml" class="blue" target="_blank">忘记账号/密码？</a>
+                <a href="../account/back_password.shtml.htm"  class="blue" target="_blank">忘记账号/密码？</a>
             </div>
             <div class="ui-form-line ui-form-captcha" id="captcha_view" style="display:none">
                 <label for="rapid-captcha" class="ui-form-label">验证码：</label>
@@ -880,7 +876,7 @@ $(document).ready(function(){
                 <input  type="submit" class="ui-button ui-button-orange" style="width: 234px;height: 36px;line-height: 36px;" tabindex="4" value="登 录" />
                 
                 <em class="ui-tip"></em>
-                <img src="../../images/Connect_logo_7.png" tppabs="https://xin/2.0/images/Connect_logo_7.png" onclick=" AA.RapidLogin.qqClick();" style="cursor:pointer; margin-left:8px;"></img>
+                <img src="../../images/Connect_logo_7.png"  onclick=" AA.RapidLogin.qqClick();" style="cursor:pointer; margin-left:8px;"></img>
             </div>
             <style>
             .login-succ{ margin:auto; width:290px; height:210px; position:fixed; left:0; right:0px; top:0px; bottom:0px; z-index:999; filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#CC000000', endColorstr='#CC000000'); border-radius:8px; text-align:center;}
@@ -891,7 +887,7 @@ $(document).ready(function(){
             </style>
             <div id="login_suc_dialog" style="display: none;">
             <div class="login-succ">
-            <h1><img src="../../images/c-login1.gif" tppabs="https://xin/2.0/images/c-login1.gif" width="68" height="93" /><span><i class="icondagou"></i>登录成功</span></h1>
+            <h1><img src="../../images/c-login1.gif"  width="68" height="93" /><span><i class="icondagou"></i>登录成功</span></h1>
             </div>
             </div>
         </form>
@@ -899,9 +895,9 @@ $(document).ready(function(){
 </div> 
 
 </div>
-<script type="text/javascript" src="../../js/rsa.js" tppabs="https://xin/2.0/js/rsa.js"></script>
-<script type="text/javascript" src="../../../webapp2.0/js/wbox.js" tppabs="https://xin/webapp2.0/js/wbox.js"></script>
-<link rel="stylesheet" href="../../css/dialog-wbox.css" tppabs="https://xin/2.0/css/dialog-wbox.css">
+<script type="text/javascript" src="../../js/rsa.js" ></script>
+<script type="text/javascript" src="../../../webapp2.0/js/wbox.js" ></script>
+
 <script>
 (function() {
 	$.ajax({
@@ -932,7 +928,7 @@ $(document).ready(function(){
 
 })();
 </script>
-<script type="text/javascript" src="../../js/channel.js" tppabs="https://xin/2.0/js/channel.js"></script>
+<script type="text/javascript" src="../../js/channel.js" ></script>
 <script>
 var _hmt = _hmt || [];
 (function() {
@@ -947,6 +943,6 @@ var _hmt = _hmt || [];
 })();
 
 </script>
-<script type="text/javascript" src="../../js/www/about/service_data2.js" tppabs="https://xin/2.0/js/www/about/service_data2.js"></script>
+<script type="text/javascript" src="../../js/www/about/service_data2.js" ></script>
 </body>
 </html>

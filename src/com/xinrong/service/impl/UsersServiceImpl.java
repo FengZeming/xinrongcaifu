@@ -87,5 +87,20 @@ public class UsersServiceImpl implements UsersService{
 	public List<Users> selectAll(Users users) {
 		return usersMapper.selectAll(users);
 	}
+	/**
+	 * 登陆
+	 */
+	//登录方法的实现,从jsp页面获取username与password
+	public boolean login(String username, String password) {
+		Users users=null;
+		users=usersMapper.getLoginUser(username);
+		if (users!=null) {
+			if (users.getUsername().equals(username)&&users.getPassword().equals(password)) {
+				users=null;
+				return true;
+			} 
+		}
+		return false;
+	}
 	
 }

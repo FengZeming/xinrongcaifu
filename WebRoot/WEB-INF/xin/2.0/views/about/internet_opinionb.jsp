@@ -9,7 +9,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>信融财富</title>
-<link href="css/basic.css" tppabs="https://xin/2.0/views/about/css/basic.css" rel="stylesheet" type="text/css" />
+<link href="css/basic.css"  rel="stylesheet" type="text/css" />
 <style>
 .agreement_warp {
 	padding: 10px;

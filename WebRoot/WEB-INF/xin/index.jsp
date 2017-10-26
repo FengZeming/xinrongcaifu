@@ -187,7 +187,7 @@ $(document).ready(function(){
 	if (location.href.indexOf('goAnswer=true') < 0) {
 		if (isAnswered =='null') {
 			$.ajax({
-				url:'v2/login/in_session_data.jso'/*tpa=https://www.xinrong.com/v2/login/in_session_data.jso*/,
+				url:'v2/login/in_session_data.jso'/*tpa=https://xin/v2/login/in_session_data.jso*/,
 			    type:'GET' ,
 			    dataType:'json',
 			    success:function (result) {
@@ -220,7 +220,7 @@ $(document).ready(function(){
         	wBox.close();
         });
         $('#wBox #goToAnswer').unbind('click').bind('click',function(){
-        	location.href="2.0/views/account/account_settings.shtml-goAnswer=true.htm"/*tpa=https://www.xinrong.com/2.0/views/account/account_settings.shtml?goAnswer=true*/;
+        	location.href="2.0/views/account/account_settings.shtml-goAnswer=true.htm"/*tpa=https://xin/2.0/views/account/account_settings.shtml?goAnswer=true*/;
         });
         $('#wBox #close').unbind('click').bind('click',function(){
         	sessionStorage.setItem('afterAnswer',true);
@@ -247,15 +247,17 @@ $(document).ready(function(){
     </div>
     <!--1 end-->
     <div class="login login_two" style="display:none;">
-      <h1><span>登录</span> | <a href="2.0/views/account/register4.0.shtml.htm"  target="_blank">注册</a></h1>
-      <input id="index_username" name="index_username" type="text" class="h-input" placeholder="账户名 / Email / 手机号" />
-	  <input type="text" style="display:none;" />
-      <input id="index_password" name="index_password" type="password" class="h-input" placeholder="密码" />
-      <input id="index_captcha" name="index_captcha" type="text" class="h-input inp_w" style="display:none;" placeholder="验证码" /> <span id="index_captcha_img_view" class="p_img" style="display:none;"><img id="index_captcha_img" src="" width="116" height="38" /></span>
-      <input id="index_captcha_seed" name="index_captcha_seed" type="hidden"  value=""/>
-      <p id="index_error" class="error"></p>
-      <a id="index_login_btn" href="javascript:void(0)" class="sub02">登录</a>
-      <p class="t-f"><a href="2.0/views/account/back_password.shtml.htm"  class="blue left">忘记账号 / 密码?</a> <a href="javascript:AA.RapidLogin.qqClick();" class="right"><img src="2.0/images/Connect_logo_7.png" /></a></p>
+      <h1><span>登录</span> | <a href="2.0/views/account/register4.0.shtml.htm" tppabs="https://xin/2.0/views/account/register4.0.shtml" target="_blank">注册</a></h1>
+      <!-- <form action="javascript:void(0)" method="post"> -->
+	      <input id="username" name="username" type="text" class="h-input" placeholder="账户名 / Email / 手机号" />
+		  <input type="text" style="display:none;" />
+	      <input id="password" name="password" type="password" class="h-input" placeholder="密码" />
+	      <input id="index_captcha" name="index_captcha" type="text" class="h-input inp_w" style="display:none;" placeholder="验证码" /> <span id="index_captcha_img_view" class="p_img" style="display:none;"><img id="index_captcha_img" src="" width="116" height="38" /></span>
+	      <input id="index_captcha_seed" name="index_captcha_seed" type="hidden"  value=""/>
+	      <p id="index_error" class="error"></p>
+	      <a id="logIn" href="javascript:void(0)" class="sub02">登录</a>
+	      <p class="t-f"><a href="2.0/views/account/back_password.shtml.htm" tppabs="https://xin/2.0/views/account/back_password.shtml" class="blue left">忘记账号 / 密码?</a> <a href="javascript:AA.RapidLogin.qqClick();" class="right"><img src="2.0/images/Connect_logo_7.png" tppabs="https://xin/2.0/images/Connect_logo_7.png" /></a></p>
+    <!-- </form> -->
     </div>
     <!--2 end-->
     <!--<div class="login login-three" style="display:none;">
@@ -273,10 +275,10 @@ $(document).ready(function(){
       <div class="t_font">
         <!--<p id="index_no_vip_btn">您是普通用户  <a href="/vip" class="f-color">立即开通VIP</a></p>
         <p id="index_vip_btn" class="f-color" style="display:none;">您是尊贵的VIP<font id="index_vip_show">--</font>会员</p>-->
-        <p>当前账户：<b id="index_username_show">--</b> <span id="index_no_vip_btn"><a href="2.0/vip.html"  class="f-color">开通VIP</a></span></p>
+        <p>当前账户：<b id="index_username_show">--</b> <span id="index_no_vip_btn"><a href="2.0/vip.html" tppabs="https://xin/2.0/vip.html" class="f-color">开通VIP</a></span></p>
       </div>
       <div class="f-sdata">累计收益(元)<p class="orange" id="earn_all">--</p></div>
-      <input onclick="javascript:location.href='2.0/views/account/account_index.shtml.htm'/*tpa=https://www.xinrong.com/2.0/views/account/account_index.shtml*/" type="button" class="sub02" value="我的账户" />
+      <input onclick="javascript:location.href='2.0/views/account/account_index.shtml.htm'/*tpa=https://xin/2.0/views/account/account_index.shtml*/" type="button" class="sub02" value="我的账户" />
     </div>
 
   </div>
@@ -284,7 +286,7 @@ $(document).ready(function(){
   <!--横幅大图片------------------------------------>
   <div id="focus_m" class="focus_m">
     <ul>
-      <li class="li_148"><a href="javascript:;"  hidefocus="true" target="_blank"></a></li>
+      <li class="li_148"><a href="javascript:;" tppabs="https://xin/2.0/action/xr_esw/esw_zt.shtml" hidefocus="true" target="_blank"></a></li>
     </ul>
   </div>
   <!--横幅大图片 结束------------------------------------>
@@ -292,9 +294,9 @@ $(document).ready(function(){
 </div>
 <!--banner end-->
 <div class="h-announcement">
-	<div class="main PositionR" id="h_announcement"><span class="t-m"><img src="2.0/images/icon_03.png"  /></span>
+	<div class="main PositionR" id="h_announcement"><span class="t-m"><img src="2.0/images/icon_03.png" tppabs="https://xin/2.0/images/icon_03.png" /></span>
 		<ul></ul>
-    	<a href="2.0/views/about/xr_announcement.shtml.htm"  class="more" target="_blank">更多></a>
+    	<a href="2.0/views/about/xr_announcement.shtml.htm" tppabs="https://xin/2.0/views/about/xr_announcement.shtml" class="more" target="_blank">更多></a>
 	</div>
 </div>
 <div class="h_s_data">
@@ -314,7 +316,7 @@ $(document).ready(function(){
       </li>
     </ul>
     <div class="clear"></div>
-    <p class="more"><i class="AllIcon"></i><a href="2.0/views/about/service_data.shtml.htm"  target="_blank">查看更多统计数据></a></p>
+    <p class="more"><i class="AllIcon"></i><a href="2.0/views/about/service_data.shtml.htm" tppabs="https://xin/2.0/views/about/service_data.shtml" target="_blank">查看更多统计数据></a></p>
   </div>
 </div>
 <!--数据 end-->
@@ -1197,7 +1199,7 @@ var	EswDialog;
 	EswDialog = $this;
 })();
 </script>
-<script type="text/javascript" src="myjs/www.xinrong.com/index.js"></script>
-
+<script type="text/javascript" src="myjs/xin/index.js"></script>
+<input type="hidden" value="<%=basePath%>" id="basePath" >
 </body>
 </html>

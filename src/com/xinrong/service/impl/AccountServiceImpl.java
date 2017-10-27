@@ -58,6 +58,42 @@ public class AccountServiceImpl implements AccountService{
 			return false;
 		}
 	}
+	/**
+     * 添加用户资金账户
+     */
+    public boolean insertUserAcount(Acounts acounts){
+    	acounts.setType(2);
+    	int num=acountsMapper.insertSelective(acounts);
+		if(num>0){
+			return true;
+		}else{
+			return false;
+		}
+    }
+    /**
+     * 添加用户借款账户 （信存宝账户）
+     */
+    public boolean insertUserLoanAcount(Acounts acounts){
+    	acounts.setType(3);
+    	int num=acountsMapper.insertSelective(acounts);
+		if(num>0){
+			return true;
+		}else{
+			return false;
+		}
+    }
+    /**
+     * 添加项目资金账户
+     */
+    public boolean insertProjectLoanAcount(Acounts acounts){
+    	acounts.setType(4);
+    	int num=acountsMapper.insertSelective(acounts);
+		if(num>0){
+			return true;
+		}else{
+			return false;
+		}
+    }
 
 	/**
 	 * 根据主键id查询
@@ -77,12 +113,11 @@ public class AccountServiceImpl implements AccountService{
 			return false;
 		}
 	}
-
+	
 	/**
 	 * 更新
 	 */
 	public boolean updateByPrimaryKey(Acounts record) {
-		// TODO Auto-generated method stub
 		return false;
 	}
 

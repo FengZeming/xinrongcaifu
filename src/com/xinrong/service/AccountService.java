@@ -28,7 +28,18 @@ public interface AccountService {
      * @return
      */
     boolean insertSelective(Acounts record);
-    
+    /**
+     * 添加用户资金账户
+     */
+    boolean insertUserAcount(Acounts acounts);
+    /**
+     * 添加用户借款账户 （信存宝账户）
+     */
+    boolean insertUserLoanAcount(Acounts acounts);
+    /**
+     * 添加项目资金账户
+     */
+    boolean insertProjectLoanAcount(Acounts acounts);
     /**
      * 根据主键查询
      * @param id

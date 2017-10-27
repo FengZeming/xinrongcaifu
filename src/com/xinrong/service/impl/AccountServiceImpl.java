@@ -1,7 +1,9 @@
 package com.xinrong.service.impl;
 
 import java.util.List;
+
 import com.xinrong.dao.AcountsMapper;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -89,6 +91,35 @@ public class AccountServiceImpl implements AccountService{
 	 */
 	public List<Acounts> selectAll(Acounts acounts) {
 		return acountsMapper.selectAll(acounts);
+	}
+
+	/**
+	 * 根据用户id查询用户资金账户
+	 */
+	public Acounts selectByUserId(Integer userid) {
+		Acounts acounts=new Acounts();
+		acounts.setUserid(userid);
+		acounts.setType(2);
+		return acountsMapper.selectOneByObject(acounts);
+	}
+	
+	/**
+	 * 根据用户id查询用户借款账户表（信存宝账户）
+	 */
+	public Acounts selectLoanAcountByUserId(Integer userid) {
+		Acounts acounts=new Acounts();
+		acounts.setUserid(userid);
+		acounts.setType(3);
+		return acountsMapper.selectOneByObject(acounts);
+	}
+	
+	/**
+	 * 根据项目id查询项目资金账户表
+	 */
+	public Acounts  selectByProjectId(Integer projectid){
+		Acounts acounts=new Acounts();
+		acounts.setProjectid(projectid);
+		return acountsMapper.selectOneByObject(acounts);
 	}
 
 }

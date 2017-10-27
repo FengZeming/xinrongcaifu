@@ -56,4 +56,20 @@ public interface AccountService {
      * @return
      */
     List<Acounts> selectAll(Acounts acounts);
+    
+    /**
+     * 根据用户id查询用户资金账户表
+     */
+    Acounts selectByUserId(Integer userid);
+    
+    /**
+     * 根据用户id查询用户借款账户表（信存宝）
+     */
+    Acounts selectLoanAcountByUserId(Integer userid);
+    
+    /**
+     * 根据 项目id查询项目资金账户表
+     * @return
+     */
+    Acounts selectByProjectId(Integer  projectid);
 }

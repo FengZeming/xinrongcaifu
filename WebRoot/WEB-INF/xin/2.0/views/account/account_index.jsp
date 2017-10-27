@@ -287,31 +287,25 @@ $(document).ready(function(){
   			<div class="indextop">
 				<dl>
 					<dt class="font01">账户余额：</dt>
-					<dd class="font01"><span class="AFont"><b class="red" id="money">--</b>元 </span><span class="font02"><a class="blue" href="../../../invest.shtml.htm" >投资</a> | <a class="blue" href="../../../my/recharge.htm" >充值</a> | <a class="blue" href="../../../my/deposit.htm" >提现</a> | <a class="blue" href="../../xincunbao.shtml.htm" >信存宝</a></span></dd>
+					<dd class="font01"><span class="AFont"><b class="red" id="money">${acounts.money }</b>元 </span><span class="font02"><a class="blue" href="../../../invest.shtml.htm" >投资</a> | <a class="blue" href="../../../my/recharge.htm" >充值</a> | <a class="blue" href="../../../my/deposit.htm" >提现</a> | <a class="blue" href="../../xincunbao.shtml.htm" >信存宝</a></span></dd>
 					<div class="clear"></div>
 				</dl>
-  				<dl>
-					<dt>投资礼金：</dt>
-					<dd><span id="rewardMoney">--</span>元<span id="deadline"></span> <a href="../about/help.shtml-tab=tab3&href=c18.htm#nc18"  class="blue" target="_blank" style=" margin-left:8px;">使用须知</a> <a href="../../../action/reg_invite.htm"  target="_blank" class="blue" style=" margin-left:8px;">推荐赢礼金</a></dd>
-				</dl>
-				<div class="black10"></div>
-				<dl>
-					<dt>积分值：</dt>
-					<dd><span id="score" class="red">--</span> 分 <a href="javascript:if(confirm('http://bbs.xinrong.com/thread-3866-1-1.html  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ�����ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://bbs.xinrong.com/thread-3866-1-1.html'"  target="_blank" class="blue">赚取积分</a> <a href="../../../action/jf.htm"  class="blue" style=" margin-left:8px;">立即抽奖&gt;&gt;</a></dd>
-				</dl>
+  				
 				<div class="black10"></div>
 			</div>
   			<div class="Accountbor"></div>
 			<div class="xincuenbao">
 				<div class="baofont">
-					<span class="font01 left">信存宝：<b class="red" id="xcbMoney">--</b>元</span>
+					<span class="font01 left">信存宝：<b class="red" id="xcbMoney">${loanAcounts.money }</b>元</span>
 					<span class="toolfoot left">
 						<ul>
 							<li>
-								<div id="tool01"><a href="#" class="blue">账户余额存入</a> |</div>
+								<div id="tool01"><a href="javascript:;" class="blue">账户余额存入</a> |</div>
 								<div class="tooltip cuenrumain">
 									<div class="tippic"><img src="../../images/acc.jpg"  width="20" height="12" /></div>
-		  							<div id="tool01_close" class="tipclose"><img src="../../images/close.png"  width="11" height="11" /></div>
+		  							<div id="tool01_close" class="tipclose">
+		  								<a id="closecuenrumain" href="javascript:;"><img src="../../images/close.png"  width="11" height="11" /></a>
+		  							</div>
 									<div class="tipcuenru">
 										<dl class="w01">
 											<dt>金额：</dt>
@@ -1371,6 +1365,7 @@ $(document).ready(function() {
 	$('.AccountNav li:eq(0) a').addClass('cur');
 });
 </script>
-
+<script type="text/javascript" src="myjs/account_index.js"></script>
+<input type="hidden" value="<%=basePath%>" id="basePath" >
 </body>
 </html>

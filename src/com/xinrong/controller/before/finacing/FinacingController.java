@@ -92,8 +92,5 @@ public class FinacingController {
 		}
 	}
 	
-	@RequestMapping("xin/finacingSuccess.html")
-	public String finacingSuccess(){
-		return "xin/finacingSuccess";
-	}
+	
 }

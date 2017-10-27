@@ -307,5 +307,13 @@
       </if>
     </trim>
   </select>
-  
+
+  <select id="getLoginUser" resultMap="BaseResultMap">
+		select u.* from users u
+		<trim prefix="where" prefixOverrides="and | or">
+			<if test="username != null">
+				and u.username = #{username}
+			</if>
+		</trim>
+	</select>
 </mapper>

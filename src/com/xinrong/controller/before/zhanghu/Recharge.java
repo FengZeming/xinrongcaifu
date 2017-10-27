@@ -37,19 +37,25 @@ public class Recharge {
 	 
 	@RequestMapping("xin/my/recharge.htm")
 	public String goToRecharge(Model model,HttpSession session){
+		Users user=new Users();
+		user.setId(1);
+		user.setName("张三");
+		user.setBankid(1);
+		user.setBanknumber("111111111111112345");
+		session.setAttribute("user", user);
 		//从session获取用户
-	 //	Users users=(Users) session.getAttribute("user");
+	 	Users users=(Users) session.getAttribute("user");
 		//获取用户的ID
-		//users.getId();
+		Integer userId=users.getId();
 		//new一个账户对象
 		Acounts acounts=new Acounts();
 		//为对象的用户Id属性赋值；
-		acounts.setUserid(1);
+		acounts.setUserid(userId);
 		//调用账户的查询账户余额方法
 		List<Acounts> list=accountService.selectAll(acounts);
 		Acounts acounts1=list.get(0);
 		Double yuE=acounts1.getMoney();
-				
+		session.setAttribute("yuE", yuE);	
 		model.addAttribute("abc", yuE);
 		return "xin/my/recharge";
 	}
@@ -58,16 +64,27 @@ public class Recharge {
 	@ResponseBody
 	public Object toAddMonery(@RequestParam String money){
 		
-		boolean falg=true;
+		
 		  //从session获取用户
 		  //Users users=(Users) session.getAttribute("user");
 		  //获取用户的ID
-		  //users.getId();
+		  //users.getId()
+		//查询账户的原本
 		Acounts acounts=new Acounts();
-		acounts.setUserid(1);
-		acounts.setMoney(Double.parseDouble(money));
-		acounts.setType(1);
-		accountService.insertSelective(acounts);
+		acounts.setUserid(1);		
+		List<Acounts> list=accountService.selectAll(acounts);
+		Acounts acounts1=list.get(0);
+		Double yuE=acounts1.getMoney();
+		
+		//更新账户
+
+		Acounts acounts2=new Acounts();
+		Integer acountId=acounts1.getId();
+		acounts2.setId(acountId);
+		acounts2.setMoney(yuE+Double.parseDouble(money));
+		acounts2.setUserid(1);
+		boolean falg=accountService.updateByPrimaryKeySelective(acounts2);
+		
 		return JSON.toJSONString(falg);
 		
 	}

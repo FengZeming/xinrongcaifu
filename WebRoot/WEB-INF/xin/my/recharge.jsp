@@ -403,37 +403,8 @@ $(function(){
     <fieldset class="ui-form">
         <form id="recharge-form" method="post" target="_blank" action="https://xin/v2/charge/do_recharge.raw" >
             <div class="ui-form-line">
-  <script type="text/javascript">
-     
-  $(document).ready(function(){  
-	  $("#queren").click(function(){
-	       // $("#money").blur(function(){
-		  //alert(${pageContext.request.contextPath})
-		var money=$("#money").val();
-		 $.ajax({
-	         "url":"<%=request.getContextPath()%>/money.json",
-	         "type":"post",
-	         "data":"money="+money,
-	         "dataType":"json",
-	         "success":callBack
-	     });
-	  
-	     function callBack(data){
-	    	  var i=data
-		     
-		       if(i=="true"){
-		    	   window.location.href="<%=request.getContextPath()%>/xin/my/true";
-		       }else{
-		    	   window.location.href="<%=request.getContextPath()%>/xin/my/false";
-		       }
-		    	 
-	     }
-		  
-	  })//失去焦点的事件
-	  
-  })  //页面加载的结束 
             
-  </script>
+  <script type="text/javascript" src="./myjs/recharge.js"></script>
                 信融财富账户余额：
                 <strong class="g-out">${abc}</strong> 元
             </div>
@@ -876,6 +847,7 @@ var _hmt = _hmt || [];
 
 <script src="../s/js/www/user-min.js-v=1591" tppabs="https://xin/s/js/www/user-min.js?v=1591"></script>
 <script>AA.User.Recharge.init();</script>
+<input type="hidden" id="juedui" value="<%=basePath %>" >
 </body>
 </html>
 

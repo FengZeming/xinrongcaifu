@@ -8,6 +8,7 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.alibaba.fastjson.JSON;
@@ -20,10 +21,12 @@ public class Deposit {
 	
 	 @Resource
 	 private BankService bankService;
+	 
+	 
 	
 	@RequestMapping("xin/my/deposit.htm")
 	public String toDeposit(){
-		System.out.println(124);
+		
 		return "xin/my/deposit";
 	}
 	
@@ -31,13 +34,8 @@ public class Deposit {
 	@RequestMapping("shengfen.json")
 	@ResponseBody
 	public Object toShenFen(HttpSession session){
-		System.out.println(121);
-		Users user=new Users();
-		user.setId(1);
-		user.setName("张三");
-		user.setBankid(1);
-		user.setBanknumber("111111111111112345");
-		session.setAttribute("user", user);
+		
+		
 		Users users=(Users) session.getAttribute("user");
 		Integer bankid=users.getBankid();
 		String name =users.getName();
@@ -47,11 +45,21 @@ public class Deposit {
 		System.out.println(banknumber1);
 		Bank bank=bankService.selectByPrimaryKey(bankid);
 		String bankName=bank.getBankname();
+		Double yuE=(Double) session.getAttribute("yuE");
+		String yuE1=yuE.toString();
 		Map<String, String> may=new HashMap<String, String>();
 		may.put("bankName", bankName);
 		may.put("name1", name1);
 		may.put("banknumber1",banknumber1);
+		may.put("yuE", yuE1);
 		return may;
 		
+	}
+	
+	@RequestMapping("shengqingtixian")
+	public String tixian(@RequestParam("money")String money){
+		System.out.println(money);
+		
+		return "";
 	}
 }

@@ -18,4 +18,6 @@ public interface AcountsMapper {
     int updateByPrimaryKey(Acounts record);
     
     List<Acounts> selectAll(Acounts acounts);
+    
+    Acounts selectOneByObject(Acounts acounts);//根据条件获取单个对象
 }

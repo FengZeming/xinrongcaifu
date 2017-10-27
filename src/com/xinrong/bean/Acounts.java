@@ -11,6 +11,8 @@ public class Acounts {
 
     private Double money;//金额
 
+    private String password;//交易密码
+    
     public Integer getId() {
         return id;
     }
@@ -50,4 +52,14 @@ public class Acounts {
     public void setMoney(Double money) {
         this.money = money;
     }
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+    
+    
 }

@@ -322,7 +322,7 @@ $(document).ready(function(){
   <li><a href="../huahua/huahua.html" >信融花花</a></li>
   <li style="display:none;"><a href="../../../my/recharge.htm" ><i class="AllIcon Icon03"></i>充值提现</a></li>
   <li><a href="../../../my/consume.htm" >收支查询</a></li>
-  <li class="liFoot"><a href="account_settings.shtml.htm" >账户设置</a></li>
+  <li class="liFoot"><a href="<%=basePath%>/account_settings.shtml.htm" >账户设置</a></li>
   <li><a href="../../../my/msg.htm" >我的消息</a></li>
   </ul>
 </div>
@@ -366,7 +366,7 @@ $(document).ready(function(){
 <div class="settings_top">
 <dl>
 <dt>信融财富账户名：</dt>
-<dd><b id="user_name">--</b></dd>
+<dd><b id="user_name">${users.username}</b></dd>
 <div class="clear"></div>
 </dl>
 <!-- add sundy zhou 风险测评2016-5-16 -->
@@ -376,14 +376,9 @@ $(document).ready(function(){
 <span id="to_risk" style="display: none"><a href="javascript:void(0)" class="blue" id="do_risk"><span id="tp2" style="margin-left:10px">点击进行自评</span></a></span>
 <div class="clear"></div>
 </dl>
+
 <dl>
-<dt>信息完整度：</dt>
-<dd><span class="progress_box"><span id="completion" class="progress_wbg" style="width: 0%;"></span></span> <font id="completion_val">0</font>%</dd>
-<div class="clear"></div>
-</dl>
-<dl>
-<dt>认证状态：</dt>
-<dd><span id="auth_email" class="status sgray"><i class="AllIcon icon01" title="邮箱"></i><span class="red">未认证</span></span><span id="auth_identity" class="status sgray"><i class="AllIcon icon02" title="身份证"></i><span class="red">未认证</span></span><span id="auth_mobile" class="status sgray"><i class="AllIcon icon03" title="手机"></i><span class="red">未认证</span></span>
+02" title="身份证"></i><span class="red">未认证</span></span><span id="auth_mobile" class="status sgray"><i class="AllIcon icon03" title="手机"></i><span class="red">未认证</span></span>
 <span id="auth_bankcard" class="status sgray"><a href="../../../my/rechargec.htm" ><i class="AllIcon icon04" title="银行卡"></i><span class="red">未认证</span></a></span>
 </dd>
 <div class="clear"></div>
@@ -2845,5 +2840,7 @@ $(window).load(function(){
 	</div>
 	</div>
 </div> -->
+
+
 </body>
 </html>

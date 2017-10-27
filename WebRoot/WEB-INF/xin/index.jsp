@@ -278,7 +278,7 @@ $(document).ready(function(){
         <p>当前账户：<b id="index_username_show">--</b> <span id="index_no_vip_btn"><a href="2.0/vip.html" tppabs="https://xin/2.0/vip.html" class="f-color">开通VIP</a></span></p>
       </div>
       <div class="f-sdata">累计收益(元)<p class="orange" id="earn_all">--</p></div>
-      <input onclick="javascript:location.href='2.0/views/account/account_index.shtml.htm'/*tpa=https://xin/2.0/views/account/account_index.shtml*/" type="button" class="sub02" value="我的账户" />
+      <input id="myAccount" type="button" class="sub02" value="我的账户" />
     </div>
 
   </div>

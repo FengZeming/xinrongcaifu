@@ -1,10 +1,9 @@
 $(function(){
-	
-	
-    
+
 	  $(document).ready(function(){ 
 		  
 		  $("#queren").click(function(){
+			 
 			var juedui= $("#juedui").val();
 			
 			alert(juedui);

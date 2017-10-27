@@ -1,27 +1,33 @@
 $(function(){
 	
-	$(document).ready(function(){ 
+	$(document).ready(function(){
 		
-		
-		
+		var juedui=$("#juedui").val();
 		 $.ajax({
-	         "url":"<%=request.getContextPath()%>/shengfen.json",
+	         "url":juedui+"/shengfen.json",
 	         "type":"post",	       
 	         "dataType":"json",
 	         "success":callBack
-	     });s
+	     });
 	  
 	     function callBack(data){
-	    	alert(data);
+	    	
 	    	$("#sf").html(data.name1);
 	    	$("#sf1").html(data.bankName);
 	    	$("#sf2").html(data.banknumber1);
-	     }
+	    	$("#tixianyueE").html(data.yuE);
+	     };
 	     
-	 })    
-    
-	        
+	    /* $("#money").blur(function(){
+	    	 var i=$("#money").val();
+	    	 alert(12+i);
+	    	 
+	     });*/
+	     
+	     
 	
+	}) //页面加载时结束   
+ 
 })
 
 

@@ -20,7 +20,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <script src="../s/js/lib/jquery.min.js-v=1591" tppabs="https://xin/s/js/lib/jquery.min.js?v=1591"></script>
 <script src="../s/js/AA.base-min.js-v=1591" tppabs="https://xin/s/js/AA.base-min.js?v=1591"></script>
 <script type="text/javascript" src="../2.0/js/rsa.js" tppabs="https://xin/2.0/js/rsa.js"></script>
-<script type="text/javascript" src="/xin/my/myjs/deposit.js"></script>
+<script type="text/javascript" src="./myjs/deposit.js"></script>
 </head>
 <style>
 .rule_font{ padding:40px 0 0 12px; clear:both; line-height:23px;}
@@ -399,14 +399,14 @@ $(function(){
     <fieldset class="ui-form">
         <form id="deposit-form" method="post" action="https://xin/my/myaadai/api_deposit" onsubmit="return false;">
             <div class="ui-form-line">
-                <label>信融财富账户余额：</label><strong class="g-out"></strong> 元
+                <label>信融财富账户余额：</label><strong class="g-out" id="tixianyueE"></strong> 元
                 <em class="ui-tip">（其中<span class="recharge-money"></span>元充值后未投资）</em>
                 <input type="hidden" id="hot_money" value=""/>
             </div>
             <div class="ui-form-line money" style="height:50px;padding-top:20px;">
                 <label for="money">提现金额：</label>
                 <input type="text" name="money" id="money" class="ui-form-input" value="" maxlength="10" autocomplete="off"/> 元
-                <a id="auto_fill"  class="blue" style="margin: 0 0 0 5px;cursor:pointer;" >自动填写</a>
+               <!--  <a id="auto_fill"  class="blue" style="margin: 0 0 0 5px;cursor:pointer;" >自动填写</a> -->
                 <input type="text" class="fix-ie6 g-hide"/>
 
                 <br/>
@@ -816,6 +816,7 @@ var _hmt = _hmt || [];
 <script src="../2.0/js/api/user_api.js-v=1591" tppabs="https://xin/2.0/js/api/user_api.js?v=1591"></script>
 <script>AA.User.Deposit.init();
 </script>
+<input type="hidden" id="juedui" value="<%=basePath %>" >
 </body>
 </html>
   </body>

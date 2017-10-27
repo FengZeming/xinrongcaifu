@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 
 
+
 import com.alibaba.fastjson.JSON;
 import com.xinrong.bean.Users;
 import com.xinrong.service.UsersService;
@@ -46,17 +47,15 @@ public class LoginController {
 		Users users=new Users();
 		users.setUsername(username);
 		users.setPassword(password);
-		List<Users> list=usersService.selectAll(users);
-		Users users1=list.get(0);
-		if (users1!=null){
-			session.setAttribute("user1", users1);;
-			System.out.println(falg);
-			return JSON.toJSONString(falg);
-		}else{
-			falg=false;
+		falg=usersService.login(username, password);
+		if (!falg) {
 			return JSON.toJSONString(falg);
 		}
-		
+		Users users1=usersService.getLoginUser(username);
+			session.setAttribute("user1", users1);
+			System.out.println(falg);
+			return JSON.toJSONString(falg);
+
 	}
 	
 }

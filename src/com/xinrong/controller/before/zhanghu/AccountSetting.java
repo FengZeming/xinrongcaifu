@@ -6,6 +6,7 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -37,20 +38,10 @@ public class AccountSetting {
 	 * @return
 	 */
 	@RequestMapping("xin/2.0/views/account/account_settings.shtml.htm")
-	public String goIntoAccountSetting(){
+	public String goIntoAccountSetting(HttpSession session,Model model){
+		Users users=(Users) session.getAttribute("user1");
+		model.addAttribute("users",users);
 		return "xin/2.0/views/account/account_settings";
 	}
-	
-	@RequestMapping(value="/list")
-	public Object getAccountList(HttpSession session,@RequestParam("username")String username,@RequestParam("identifyNo")String identifyNo,
-								@RequestParam("bankId")String bankId,
-								@RequestParam("bankAdressId")String bankAdressId,
-								@RequestParam("bankNumber")String bankNumber){
-				
-			
-		
-				return "";
-		
-	} 
-	
+
 }

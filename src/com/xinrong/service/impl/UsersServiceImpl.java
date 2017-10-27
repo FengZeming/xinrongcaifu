@@ -90,6 +90,10 @@ public class UsersServiceImpl implements UsersService{
 	/**
 	 * 登陆
 	 */
+
+	/**
+	 * 根据账户密码判断是否登陆
+	 */
 	//登录方法的实现,从jsp页面获取username与password
 	public boolean login(String username, String password) {
 		Users users=null;
@@ -101,6 +105,14 @@ public class UsersServiceImpl implements UsersService{
 			} 
 		}
 		return false;
+	}
+	/**
+	 * 登陆返回用户名
+	 */
+	@Override
+	public Users getLoginUser(String username) {
+		Users users=usersMapper.getLoginUser(username);
+		return users;
 	}
 	
 }

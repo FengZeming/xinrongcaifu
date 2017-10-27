@@ -2,6 +2,8 @@ package com.xinrong.service;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.Param;
+
 import com.xinrong.bean.Users;
 
 /**
@@ -50,8 +52,14 @@ public interface UsersService {
      * 查询全部
      */
     List<Users> selectAll(Users users);
+
     /**
-     * 登陆
+     * 根据账号密码判断是否登陆
      */
     boolean login(String username,String password);
+    /**
+     * 返回用户名
+     *
+     */
+    Users getLoginUser(@Param("username")String username);
 }

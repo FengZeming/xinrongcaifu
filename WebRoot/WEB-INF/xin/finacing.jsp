@@ -317,7 +317,7 @@ $(document).ready(function(){
 <div class="container-fluid">
 	<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
         	
-        	<form class="form-signin">
+        	<form class="form-signin" method="post" action="commitProject.html">
 	      	
 	      	<div class="row">
 	      		<div class="col-md-4 col-md-offset-4">
@@ -338,20 +338,16 @@ $(document).ready(function(){
 	      	<div class="row">
 	      		<div class="col-md-1 col-md-offset-3"><p class="form-control-static">融资期限</p></div>
 	      		<div class="col-md-4">
-	      			<label for="selectFinacingTime" class="sr-only" >融资期限</label>
-	      			<select name="projectfinancingtime" id="selectFinacingTime" class="form-control">
-	      				<option value="0">--请选择融资期限--</option>
-	      			</select>
+	      			<label for="selectFinacingTime" class="sr-only" >融资期限(月)</label>
+	      			<input type="number" name="projectfinancingtime" id="selectFinacingTime" class="form-control"  max="1" min="1" placeholder="请输入融资期限" value="1">
 	        	</div>
 	      	</div>
 	      	
 	      	<div class="row">
 	      		<div class="col-md-1 col-md-offset-3"><p class="form-control-static">还款期限</p></div>
 	      		<div class="col-md-4">
-	      			<label for="selectFinacingTime" class="sr-only" >还款期限</label>
-	      			<select name="projectfinancingtime" id="selectFinacingTime" class="form-control">
-	      				<option value="0">--请选择还款期限--</option>
-	      			</select>
+	      			<label for="selectProjectduration" class="sr-only" >还款期限（月）</label>
+	      			<input type="number" name="projectduration" id="selectProjectduration" class="form-control"  max="1" min="1" placeholder="请输入还款期限" value="1">
 	        	</div>
 	      	</div>
 	      	
@@ -359,17 +355,18 @@ $(document).ready(function(){
 	      		<div class="col-md-1 col-md-offset-3"><p class="rpwd form-control-static">融资金额</p></div>
 	      		<div class="col-md-4">
 	      			<label for="inputExpectedfinancingamount" class="sr-only">融资金额</label>
-	        		<input type="number" name="expectedfinancingamount" id="inputExpectedfinancingamount" class="form-control" placeholder="请输入融资金额" required>
+	        		<input type="number" name="expectedfinancingamount" id="inputExpectedfinancingamount" max="1" min="1"  class="form-control" placeholder="请输入融资金额" required>
 	        	</div>
 	      	</div>
 	      	
 	      	<div class="row">
-	      		<div class="col-md-4 col-md-offset-4">
-	      			<p id="errorMessage" style="display: none">融资金额过大</p>
+	      		<div class="col-md-1 col-md-offset-3"><p class="rpwd form-control-static">预期年化收益率</p></div>
+	      		<div class="col-md-4">
+	      			<label for="inputExpectedannualized" class="sr-only">预期年化收益率</label>
+	        		<input type="text" name="expectedannualized" id="inputExpectedannualized"  class="form-control" placeholder="请输入预期年化收益率" required>
 	        	</div>
 	      	</div>
-	      	
-	      	
+
 	      	<div class="row">
 	      		<div class="col-md-4 col-md-offset-4">
 	      			<button class="btn btn-lg btn-primary btn-block" type="submit">提交</button>
@@ -1108,7 +1105,7 @@ var	EswDialog;
 })();
 </script>
 <script type="text/javascript" src="myjs/xin/finacing.js"></script>
-
+<input type="hidden" value="<%=basePath%>" id="basePath" >
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
 </body>

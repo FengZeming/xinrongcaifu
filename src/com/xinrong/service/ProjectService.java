@@ -23,4 +23,5 @@ public interface ProjectService {
 	    List<Project> selectAll(Project project);//查询所有项目
 	    
 	    List<Project> selectBySeriesId(int seriesId);//根据系列id查询项目
+	    
 }

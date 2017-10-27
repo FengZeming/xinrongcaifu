@@ -20,12 +20,15 @@ import com.xinrong.util.ProjectUtil;
 public class Test {
 
 	public static void main(String[] args) {
-		ApplicationContext context=new ClassPathXmlApplicationContext("applicationContext.xml");
-		ProjectService projectService=(ProjectService)context.getBean("projectServiceImpl");
-//		Project project=new Project();
-//		List<Project> list=projectService.selectAll(project);
-		Project project=projectService.selectByPrimaryKey(1);
-		System.out.println(project.getProjectname());
-		System.out.println(project.getReceivablewayName());
+//		ApplicationContext context=new ClassPathXmlApplicationContext("applicationContext.xml");
+//		ProjectService projectService=(ProjectService)context.getBean("projectServiceImpl");
+////		Project project=new Project();
+////		List<Project> list=projectService.selectAll(project);
+//		Project project=projectService.selectByPrimaryKey(1);
+//		System.out.println(project.getProjectname());
+//		System.out.println(project.getReceivablewayName());
+		String aString="运系列-070101之4321";
+		String name=ProjectUtil.createProjectName("信系列", "0003");
+		System.out.println(name);
 	}
 }

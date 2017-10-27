@@ -273,5 +273,12 @@
       </if>
     </trim>
   </select>
-    
+    <select id="selectBiggistBySeiresId" resultType="Integer">
+    select if((select max(id)
+    	FROM project where seriesId = #{seriesid,jdbcType=INTEGER} and projectcreationtime=DATE_FORMAT(#{projectcreationtime},'%Y-%m-%d')) is not null,
+    	(select max(id)
+    	FROM project where seriesId = #{seriesid,jdbcType=INTEGER} and projectcreationtime=DATE_FORMAT(#{projectcreationtime},'%Y-%m-%d')),
+    	0)
+    	
+    </select>
 </mapper>

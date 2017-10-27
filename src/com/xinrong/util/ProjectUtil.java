@@ -17,9 +17,9 @@ public class ProjectUtil {
 		String date=DateTimeUtil.getDateString();
 		String name=seriesname+"-"+date+"之";
 		Integer endNum=Integer.parseInt(end);
-		endNum=endNum++;
+		endNum=endNum+1;
 		end=String.valueOf(endNum);
-		if(end.length()<4){
+		while(end.length()<4){
 			end="0"+end;
 		}
 		name=name+end;

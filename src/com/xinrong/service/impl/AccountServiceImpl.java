@@ -1,14 +1,21 @@
 package com.xinrong.service.impl;
 
+import java.util.Date;
 import java.util.List;
 
 import com.xinrong.dao.AcountsMapper;
+import com.xinrong.dao.DepositrecordMapper;
+import com.xinrong.dao.LoanrecoredMapper;
+import com.xinrong.dao.UsersMapper;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.xinrong.bean.Acounts;
+import com.xinrong.bean.Depositrecord;
+import com.xinrong.bean.Loanrecored;
 import com.xinrong.service.AccountService;
+import com.xinrong.util.BusinessNoUtil;
 /**
  * 资金账户impl
  * @author lenovo
@@ -18,6 +25,12 @@ import com.xinrong.service.AccountService;
 public class AccountServiceImpl implements AccountService{
 	@Autowired
 	private AcountsMapper acountsMapper;
+	@Autowired
+	private UsersMapper usersMapper;
+	@Autowired
+	private LoanrecoredMapper loanrecoredMapper;
+	@Autowired
+	private DepositrecordMapper depositrecordMapper;
 	
 	public AcountsMapper getAcountsMapper() {
 		return acountsMapper;
@@ -25,6 +38,30 @@ public class AccountServiceImpl implements AccountService{
 
 	public void setAcountsMapper(AcountsMapper acountsMapper) {
 		this.acountsMapper = acountsMapper;
+	}
+	
+	public UsersMapper getUsersMapper() {
+		return usersMapper;
+	}
+
+	public void setUsersMapper(UsersMapper usersMapper) {
+		this.usersMapper = usersMapper;
+	}
+
+	public LoanrecoredMapper getLoanrecoredMapper() {
+		return loanrecoredMapper;
+	}
+
+	public void setLoanrecoredMapper(LoanrecoredMapper loanrecoredMapper) {
+		this.loanrecoredMapper = loanrecoredMapper;
+	}
+
+	public DepositrecordMapper getDepositrecordMapper() {
+		return depositrecordMapper;
+	}
+
+	public void setDepositrecordMapper(DepositrecordMapper depositrecordMapper) {
+		this.depositrecordMapper = depositrecordMapper;
 	}
 
 	/**
@@ -179,8 +216,25 @@ public class AccountServiceImpl implements AccountService{
 				return "error";//未知错误
 			}
 			acounts.setMoney(acounts.getMoney()+addmoney);//信存宝账户增加金额
-			int a=acountsMapper.updateByPrimaryKeySelective(acounts);//修改数据库
-			if(a>0){
+			int a=acountsMapper.updateByPrimaryKeySelective(acounts);//修改账户表
+			//创建借款记录表对象
+			Loanrecored loanrecored=new Loanrecored();
+			loanrecored.setUserid(acounts.getUserid());
+			loanrecored.setBusinessno(BusinessNoUtil.createLoanBusinessNo(acounts.getUserid()));
+			loanrecored.setBusinessdate(new Date());
+			loanrecored.setMoney(addmoney);
+			loanrecored.setType(6);//设置借款记录表类型为充值
+			int b=loanrecoredMapper.insertSelective(loanrecored);//修改借款记录表
+			//创建充值提现记录表对象
+			Depositrecord depositrecord=new Depositrecord();
+			depositrecord.setUserid(acounts.getUserid());
+			depositrecord.setSerialnum(BusinessNoUtil.createDepositeBusinessNo(acounts.getUserid()));
+			depositrecord.setTransactionamount(addmoney);
+			depositrecord.setTransactiontype(2);//设置充值提现记录类型为提现
+			depositrecord.setTransactionmode(4);//设置交易方式为信存宝转账
+			depositrecord.setTransactiondate(new Date());
+			int c=depositrecordMapper.insertSelective(depositrecord);
+			if(a>0&&b>0&&c>0){
 				return "true";//成功
 			}else{
 				return "error";//未知错误

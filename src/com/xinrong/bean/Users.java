@@ -42,6 +42,8 @@ public class Users {
     private Double restminpayment;//	上月未清偿最低还款额	
 
     private Integer latedays;//	滞纳天数（每日更新）	
+    
+    private Double creditline;//信用额度
 
     public Integer getId() {
         return id;
@@ -186,4 +188,13 @@ public class Users {
     public void setLatedays(Integer latedays) {
         this.latedays = latedays;
     }
+
+	public Double getCreditline() {
+		return creditline;
+	}
+
+	public void setCreditline(Double creditline) {
+		this.creditline = creditline;
+	}
+    
 }

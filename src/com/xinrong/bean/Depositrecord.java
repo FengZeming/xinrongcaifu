@@ -15,7 +15,7 @@ public class Depositrecord {
 
     private Double interest;  //利息
 
-    private Integer transactionmode;  //交易方式（1.银联卡支付2.微信支付3.支付宝支付）
+    private Integer transactionmode;  //交易方式（1.银联卡支付2.微信支付3.支付宝支付4.信存宝转账）
 
     private Date transactiondate;  //交易日期
 

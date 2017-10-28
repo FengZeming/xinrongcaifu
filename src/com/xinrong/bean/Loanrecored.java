@@ -13,7 +13,7 @@ public class Loanrecored {   //借款记录
 
     private Date businessdate;  //交易日期
 
-    private Integer type;  //交易类型(1.借款2.还款 3.产生利息4.滞纳金5.结转上月)
+    private Integer type;  //交易类型(1.借款2.还款 3.产生利息4.滞纳金5.结转上月)6.充值7.提现
 
     public Integer getId() {
         return id;

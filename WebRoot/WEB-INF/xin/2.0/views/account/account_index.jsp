@@ -300,7 +300,7 @@ $(document).ready(function(){
 					<span class="toolfoot left">
 						<ul>
 							<li>
-								<div id="tool01"><a id="saveAcount" href="javascript:;" class="blue">账户余额存入</a> |</div>
+								<div id="tool01"><a id="saveAcount" href="javascript:;" class="blue">充值</a> |</div>
 								<div class="tooltip cuenrumain">
 									<div class="tippic"><img src="../../images/acc.jpg"  width="20" height="12" /></div>
 		  							<div id="tool01_close" class="tipclose">
@@ -325,7 +325,7 @@ $(document).ready(function(){
 								</div>
 							</li>
 							<li>
-								<div id="tool02"><a id="rolloutAcount" href="javascript:;" class="blue">转出</a> |</div>
+								<div id="tool02"><a id="rolloutAcount" href="javascript:;" class="blue">提现</a> |</div>
 								<div class="tooltip zhuanchumain">
 	  								<div class="tippic"><img src="../../images/acc.jpg"  width="20" height="12" /></div>
 	  								<div id="tool02_close" class="tipclose">

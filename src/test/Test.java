@@ -27,8 +27,8 @@ public class Test {
 //		Project project=projectService.selectByPrimaryKey(1);
 //		System.out.println(project.getProjectname());
 //		System.out.println(project.getReceivablewayName());
-		String aString="运系列-070101之4321";
-		String name=ProjectUtil.createProjectName("信系列", "0003");
-		System.out.println(name);
+		Date date=new Date();
+		String aString=DateTimeUtil.changeFormat(date, "yyMMddhhmmss");
+		System.out.println(aString);
 	}
 }

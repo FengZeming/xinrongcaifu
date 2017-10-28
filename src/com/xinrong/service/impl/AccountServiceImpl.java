@@ -286,10 +286,49 @@ public class AccountServiceImpl implements AccountService{
 		}else{//部分 提现，部分借款
 			Double depositeMoney=acounts.getMoney();//提现金额
 			Double loanMoney=rolloutmoney-acounts.getMoney();//借款金额
-			Users users=new Users();
-			
-			
-			return "noEnoughMoney";//信存宝账户没有足够金额
+			Users users=usersMapper.selectByPrimaryKey(acounts.getUserid());
+			Double creditline=users.getCreditline();
+			if(creditline<loanMoney){
+				return "noEnoughMoney";//信存宝账户借款额度不足
+			}
+			Acounts finacingAcounts=new Acounts();//资金账户
+			finacingAcounts.setUserid(acounts.getUserid());
+			finacingAcounts.setType(2);
+			finacingAcounts=acountsMapper.selectOneByObject(finacingAcounts);
+			finacingAcounts.setMoney(finacingAcounts.getMoney()+rolloutmoney);
+			int a=acountsMapper.updateByPrimaryKeySelective(finacingAcounts);//修改账户表
+			//创建借款记录表对象（提现）
+			Loanrecored loanrecored=new Loanrecored();
+			loanrecored.setUserid(acounts.getUserid());
+			loanrecored.setBusinessno(BusinessNoUtil.createLoanBusinessNo(acounts.getUserid()));
+			loanrecored.setBusinessdate(new Date());
+			loanrecored.setMoney(depositeMoney);
+			loanrecored.setType(7);//设置借款记录表类型为提现 
+			int b=loanrecoredMapper.insertSelective(loanrecored);//修改借款记录表
+			//创建借款记录表对象（借款）
+			Loanrecored loanrecored2=new Loanrecored();
+			loanrecored2.setUserid(acounts.getUserid());
+			loanrecored2.setBusinessno(BusinessNoUtil.createLoanBusinessNo(acounts.getUserid()));
+			loanrecored2.setBusinessdate(new Date());
+			loanrecored2.setMoney(depositeMoney);
+			loanrecored2.setType(1);//设置借款记录表类型为提现 
+			int c=loanrecoredMapper.insertSelective(loanrecored2);//修改借款记录表
+			//创建充值提现记录表对象
+			Depositrecord depositrecord=new Depositrecord();
+			depositrecord.setUserid(acounts.getUserid());
+			depositrecord.setSerialnum(BusinessNoUtil.createDepositeBusinessNo(acounts.getUserid()));
+			depositrecord.setTransactionamount(rolloutmoney);
+			depositrecord.setTransactiontype(1);//设置充值提现记录类型为充值
+			depositrecord.setTransactionmode(4);//设置交易方式为信存宝转账
+			depositrecord.setTransactiondate(new Date());
+			int d=depositrecordMapper.insertSelective(depositrecord);//修改充值提现记录表
+			acounts.setMoney(acounts.getMoney()-rolloutmoney);
+			int e=acountsMapper.updateByPrimaryKeySelective(acounts);//修改信存宝账户的数据表
+			if(a>0&&b>0&&c>0&&d>0&&e>0){
+				return "true";//成功
+			}else{
+				return "error";//未知错误
+			}
 		}
 	}
 }

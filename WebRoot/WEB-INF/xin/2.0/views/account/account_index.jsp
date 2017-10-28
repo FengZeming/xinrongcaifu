@@ -278,7 +278,7 @@ $(document).ready(function(){
 <!--nav end-->
 <div class="AccountRight right">
 	<div class="AccountBoxbr">
-  		<h1><span class="left BoxbrTitle"><span id="leftTitle">上午好，--</span><a href="#" id="isCheckedEmail"><i class="wmail AllIcon" title="邮箱"></i></a><a href="#" id="isCheckedMobile"><i class="wtel AllIcon" title="手机"></i></a><a href="#" id="isCheckedIdentification"><i class="wID AllIcon" title="身份证"></i></a><a href="#" id="isCheckedBankCard"><i class="wbank AllIcon" title="银行卡"></i></a></span>
+  		<h1><span class="left BoxbrTitle"><span id="leftTitle">上午好，${user.name }</span><a href="#" id="isCheckedEmail"><i class="wmail AllIcon" title="邮箱"></i></a><a href="#" id="isCheckedMobile"><i class="wtel AllIcon" title="手机"></i></a><a href="#" id="isCheckedIdentification"><i class="wID AllIcon" title="身份证"></i></a><a href="#" id="isCheckedBankCard"><i class="wbank AllIcon" title="银行卡"></i></a></span>
   			<span class="right BoxBrTitlefont" id="unVip"><i class="AllIcon Icon01"></i><a href="../../vip.html" >成为VIP会员，尊享多项特权！ </a></span>
   			<span class="right BoxBrTitlefont01" id="vip" style="display:none;"><p class="red"><i class="AllIcon icon01"></i>您是尊贵的<span id="vipGrade">-</span>会员！</p>有效期至：<span id="vipDeadLine">--</span> <a href="../../vip.html"  class="blue">详情</a></span>
   		</h1>
@@ -357,7 +357,7 @@ $(document).ready(function(){
 				</div>
   				<div class="clear"></div>
   				<div class="baofont01">昨日收益：<span class="red" id="todayIncome">--</span>元 </div>
-  				<div class="baofont02">昨日年化收益率：<b id="rate">--</b>% <span>万份收益：<b id="tenThousandIncome">--</b>元</span><span>剩余额度：<b id="syed">&gt;100万</b>元</span></div>
+  				<div class="baofont02"><span>剩余额度：<b id="syed">&gt;${user.creditline+loanAcounts.money }</b>元</span></div>
   			</div>
   			<div class="black10"></div>
   			<h2><span class="left">账户资产概览</span><a href="../../../my/invest.htm"  class="blue right">详情</a></h2>

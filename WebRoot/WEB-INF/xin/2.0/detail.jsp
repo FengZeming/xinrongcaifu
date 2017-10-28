@@ -400,7 +400,7 @@ $(document).ready(function(){
 		    <span class="boxfont"><a href="javascript:DETAIL_BS.InitData.ToggleRefundPlan(1)" class="blue">查看回款计划&gt;</a></span>
 		</dl>
 		<div id="investBtn" class="boxsub"></div>
-		<div class="boxsub" ><a href="#" class="sub02">立即投资</a></div>
+		<div class="boxsub" ><a id="investSubmit" href="javascript:;" class="sub02">立即投资</a></div>
 		<div class="boxsub" style="display:none"><a href="#" class="sub04" >未开始</a></div>
 		<div class="boxsub" style="display:none"><a href="#" class="sub01" >已投满</a></div>
  
@@ -1037,6 +1037,7 @@ $(document).ready(function(){
 </div>
 </div>
 </div>
+ 
  
 <div id="wgt-dialog-invest-two-wrapper" style="display: none;">
 	<div class="dialogmain" style="width:494px;background: none;">

@@ -16,4 +16,12 @@ $(function(){
 		});
 	})
 	
+	
+	//点击立即投资
+	$("#investSubmit").click(function(){
+		$("#wgt-dialog-invest-two-wrapper").show();
+		$("#wgt-dialog-invest-two-wrapper").css("position", "fixed");
+		$("#wgt-dialog-invest-two-wrapper").css("position", "fixed");
+	})
+	
 })

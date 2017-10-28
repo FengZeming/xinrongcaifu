@@ -1,13 +1,20 @@
 package com.xinrong.service.impl;
 
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.xinrong.bean.Acounts;
+import com.xinrong.bean.Investrecord;
 import com.xinrong.bean.Provinces;
+import com.xinrong.dao.AcountsMapper;
+import com.xinrong.dao.InvestrecordsMapper;
 import com.xinrong.dao.ProvincesMapper;
 import com.xinrong.service.ProvincesService;
+import com.xinrong.util.BusinessNoUtil;
+import com.xinrong.util.ProjectUtil;
 /**
  * 省impl
  * @author lenovo
@@ -18,6 +25,7 @@ public class ProvincesServiceImpl implements ProvincesService{
 	@Autowired
 	private ProvincesMapper provincesMapper;
 	
+	
 	public ProvincesMapper getProvincesMapper() {
 		return provincesMapper;
 	}
@@ -25,6 +33,8 @@ public class ProvincesServiceImpl implements ProvincesService{
 	public void setProvincesMapper(ProvincesMapper provincesMapper) {
 		this.provincesMapper = provincesMapper;
 	}
+	
+	
 
 	/**
 	 * 删除
@@ -91,5 +101,6 @@ public class ProvincesServiceImpl implements ProvincesService{
 	public List<Provinces> selectAll(Provinces provinces) {
 		return provincesMapper.selectAll(provinces);
 	}
-
+	
+	
 }

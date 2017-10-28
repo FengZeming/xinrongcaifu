@@ -37,4 +37,16 @@ public class ProjectUtil {
 		date=DateTimeUtil.caculateDate(date, projectduration);
 		return date;
 	}
+	
+	/**
+	 * 计算投资方需支付佣金
+	 */
+	public static Double getCommission(Double money){
+		Double rate=0.003;//固定0.3%费率
+		Double commission=money*rate;//佣金
+		if(commission<5){
+			commission=(double) 5;//最低佣金5元
+		}
+		return commission;
+	}
 }

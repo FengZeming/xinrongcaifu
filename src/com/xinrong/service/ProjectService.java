@@ -24,4 +24,5 @@ public interface ProjectService {
 	    
 	    List<Project> selectBySeriesId(int seriesId);//根据系列id查询项目
 	    
+	    String invest(Integer userid,Integer projectid,Double investmoney,String password);//投资
 }

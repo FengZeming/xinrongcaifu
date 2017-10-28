@@ -33,4 +33,21 @@ public class BusinessNoUtil {
 		}
 		return idString+aString;
 	}
+	
+	/**
+	 * 投资记录表流水号
+	 */
+	public static String createInvestRecordNo(Integer userid,Integer projectid){
+		Date date=new Date();
+		String aString=DateTimeUtil.changeFormat(date, "yyMMddhhmmss");
+		String useridString=String.valueOf(userid);
+		String projectidString=String.valueOf(projectid);
+		if(useridString.length()<2){
+			useridString="0"+useridString;
+		}
+		if(projectidString.length()<2){
+			projectidString="0"+projectidString;
+		}
+		return projectidString+useridString+aString;
+	}
 }

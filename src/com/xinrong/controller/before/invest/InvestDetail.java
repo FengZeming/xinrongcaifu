@@ -2,7 +2,11 @@ package com.xinrong.controller.before.invest;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -46,9 +50,17 @@ public class InvestDetail {
 	@RequestMapping("xin/2.0/detail.shtml.htm")
 	public String goIntoInvestDetail(Model model,@RequestParam("projectid")Integer projectid){
 		Project project=projectService.selectByPrimaryKey(projectid);
-		model.addAttribute("project",project);
+		model.addAttribute("project",project);//项目对象
 		Users financingUser=usersService.selectByPrimaryKey(project.getFinancinguserid());
-		model.addAttribute("financingUser", financingUser);
+		model.addAttribute("financingUser", financingUser);//用户对象
+		
+		//对话框内容
+		Integer projectfinancingtime=project.getProjectfinancingtime();//融资期限
+		Double expectedannualized=project.getExpectedannualized();//预期年化收益率
+		Map map=new HashMap();
+		map.put("projectfinancingtime", projectfinancingtime);
+		map.put("expectedannualized", expectedannualized);
+		model.addAttribute("map", map);
 		return "xin/2.0/detail";
 	}
 
@@ -60,7 +72,7 @@ public class InvestDetail {
 	public Object getProfixAjax(@RequestParam("money")Double money,@RequestParam("id")Integer id){
 		Project project=projectService.selectByPrimaryKey(id);
 		Integer projectduration=project.getProjectduration();
-		Double expectedannualized=project.getExpectedannualized();
+		Double expectedannualized=project.getExpectedannualized();//预期年化收益率
 		Double profix=Caculator.profitCaculator(projectduration, expectedannualized, money);
 		Date endDate=ProjectUtil.getEndDate(project);
 		String endDateString=DateTimeUtil.changeFormat(endDate, "yy年MM月dd日");
@@ -68,5 +80,18 @@ public class InvestDetail {
 		list.add(profix);
 		list.add(endDateString);
 		return list;
+	}
+	
+	/**
+	 * 点击立即投资Ajax
+	 */
+	@RequestMapping("commitInvest")
+	@ResponseBody
+	public Object commitInvest(HttpSession session,
+			@RequestParam("projectid")Integer projectid,@RequestParam("investmoney")Double investmoney,
+			@RequestParam("password")String password){
+		Integer userid=((Users)session.getAttribute("user")).getId();
+		String result=projectService.invest(userid, projectid, investmoney, password);//投资
+		return result;
 	}
 }

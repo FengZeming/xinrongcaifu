@@ -11,6 +11,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <title>信融财富 - 上市公司战略投资，P2P网贷专业互联网投资理财平台 - 投资理财</title>
 <meta name="Description" content="信融财富官网是一个在线融资理财,专业P2P网络借贷,安全网上投资理财平台,在线投资理财者可通过信融财富获得安全的网络投资理财服务,该服务以投资理财者利益为出发点,100%本息保障,力争为网络投资理财者提供一款有安全保障、省时省心、且收益可观的服务旗舰品,享受安全放心的p2p网络借贷尽在信融财富.">
 <meta name="Keywords" content="网贷,p2p理财,p2p网贷,网贷平台,p2p网络借贷,理财,投资,投资网,理财网,投资理财,网络投资,网上理财,安全理财,在线理财,信融财富官网">
+<link href="myjs/detail.css" rel="stylesheet"  type="text/css"/>
 <link href="css/dialog.css" tppabs="https://xin/2.0/css/dialog.css" rel="stylesheet" type="text/css" />
 <link href="css/global.css" tppabs="https://xin/2.0/css/global.css" rel="stylesheet" type="text/css" />
 <link href="css/basic.css" tppabs="https://xin/2.0/css/basic.css" rel="stylesheet" type="text/css" />
@@ -1043,21 +1044,16 @@ $(document).ready(function(){
 	<div class="dialogmain" style="width:494px;background: none;">
 		<div class="mainbox" style="border: none;">
 			<div class="dialogline">
-			<h2 style="padding-bottom:15px;margin-top:-10px;" id="show_vip_tip"><span class="red" ><b>提示：vip会员持有1个月后即可转让</b></span></h2>
+			<h2 style="padding-bottom:15px;margin-top:-10px;" id="show_vip_tip"><span class="red" ><b>提示：vip会员持有1个月后即可转让</b></span><a id="closeInvest" href="javascript:;">[关闭]</a></h2>
 				<h2><font id="do_invest_two_title"></font> <span id='do_invest_dlg_title_icons'> </span></h2>
 				<ul>
-				<li>预期年化收益率：<span id="do_invest_dlg_rate"></span></li>
-				<li>融资期限：<span id="do_invest_two_deadline"></span></li>
+				<li>预期年化收益率：<span id="do_invest_dlg_rate">${map.expectedannualized }</span></li>
+				<li>融资期限：<span id="do_invest_two_deadline">${map.projectfinancingtime }</span></li>
 				<li>投资金额：<b class="red" id="do_invest_two_money"></b> 元</li>
-                <li id="get_reward_li" style="display:none;">额外奖励：<span class="f-raise red" id="get_reward">X%</span></li>
 				<div class="clear"></div>
 				</ul>
 				<dl>
-				<dd>已抵扣礼金：<span id="do_invest_two_reward"></span> <span id='do_invest_two_reward_unit'>元</span></dd>
-				<div class="clear"></div>
-				</dl>
-				<dl>
-				<dd>预期收益：<font class="red" id="do_invest_dlg_total_interest">...</font> 元 <span class="gray font02" style="color:#999;">(含<a href="javascript:if(confirm('https://xin/help/faq/2  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ�����ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='https://xin/help/faq/2#1'" tppabs="https://xin/help/faq/2#1" target="_blank" title="投资服务费在回款时扣除，按投资收益的0%-10%收取，具体比例由投资时VIP等级决定" class="blue">投资服务费</a><font id="do_invest_manage_fee">...</font>元)</span></dd>
+				<dd>预期收益：<font class="red" id="do_invest_dlg_total_interest"></font> 元 <span class="gray font02" style="color:#999;"></span></dd>
 				<div class="clear"></div>
 				</dl>
 				<dl class="tradepass">
@@ -1074,12 +1070,6 @@ $(document).ready(function(){
 				   	<a href="views/account/back_password.shtml-tab=2.htm" tppabs="https://xin/2.0/views/account/back_password.shtml?tab=2" class="blue">忘记交易密码？</a>
 					<p class="red" style="display: none;"><i class="AllIcon icon01"></i>交易密码必须为6-16个字符</p>
 				</dd>
-				<div class="clear"></div>
-				</dl>
-				<div class="clear"></div>
-				<dl>
-				<dt>验证码：</dt>
-				<dd><input id="do_invest_two_cap_input" tabindex="103" name="" type="text" class="text01" /><input type="hidden" id="do_invest_two_seed" value="0" /> <span class="pic" id="do_invest_two_cap"><img id="img-captcha" src="" width="90" height="28" title="看不清楚？换一个" ></span><p class="red" id="do_invest_two_error_tip" style="display: none;"><i class="AllIcon icon01"></i><font id="do_invest_two_error_msg"></font></p></dd>
 				<div class="clear"></div>
 				</dl>
 				<div class="clear"></div>
@@ -1365,5 +1355,6 @@ var	EswDialog;
 })();
 </script>
 <script type="text/javascript" src="myjs/detail.js"></script>
+<input type="hidden" value="<%=basePath%>" id="basePath" >
 </body>
 </html>

@@ -14,6 +14,7 @@ import org.springframework.stereotype.Service;
 import com.xinrong.bean.Acounts;
 import com.xinrong.bean.Depositrecord;
 import com.xinrong.bean.Loanrecored;
+import com.xinrong.bean.Users;
 import com.xinrong.service.AccountService;
 import com.xinrong.util.BusinessNoUtil;
 /**
@@ -248,7 +249,7 @@ public class AccountServiceImpl implements AccountService{
      * 信存宝账户提现
      */
 	public String xincunbaoDeposit(Acounts acounts,Double rolloutmoney) {
-		if(acounts.getMoney()>=rolloutmoney){
+		if(acounts.getMoney()>=rolloutmoney){//金额足够，全部为提现 
 			acounts.setMoney(acounts.getMoney()-rolloutmoney);
 			int a=acountsMapper.updateByPrimaryKeySelective(acounts);//信存宝账户提现
 			if(a<=0){
@@ -259,13 +260,35 @@ public class AccountServiceImpl implements AccountService{
 			finacingAcounts.setType(2);
 			finacingAcounts=acountsMapper.selectOneByObject(finacingAcounts);
 			finacingAcounts.setMoney(finacingAcounts.getMoney()+rolloutmoney);
-			int b=acountsMapper.updateByPrimaryKeySelective(finacingAcounts);
-			if(b>0){
+			int b=acountsMapper.updateByPrimaryKeySelective(finacingAcounts);//修改账户表
+			//创建借款记录表对象
+			Loanrecored loanrecored=new Loanrecored();
+			loanrecored.setUserid(acounts.getUserid());
+			loanrecored.setBusinessno(BusinessNoUtil.createLoanBusinessNo(acounts.getUserid()));
+			loanrecored.setBusinessdate(new Date());
+			loanrecored.setMoney(rolloutmoney);
+			loanrecored.setType(7);//设置借款记录表类型为提现 
+			int c=loanrecoredMapper.insertSelective(loanrecored);//修改借款记录表
+			//创建充值提现记录表对象
+			Depositrecord depositrecord=new Depositrecord();
+			depositrecord.setUserid(acounts.getUserid());
+			depositrecord.setSerialnum(BusinessNoUtil.createDepositeBusinessNo(acounts.getUserid()));
+			depositrecord.setTransactionamount(rolloutmoney);
+			depositrecord.setTransactiontype(1);//设置充值提现记录类型为充值
+			depositrecord.setTransactionmode(4);//设置交易方式为信存宝转账
+			depositrecord.setTransactiondate(new Date());
+			int d=depositrecordMapper.insertSelective(depositrecord);
+			if(b>0&&c>0&&d>0){
 				return "true";//成功
 			}else{
 				return "error";//未知错误
 			}
-		}else{
+		}else{//部分 提现，部分借款
+			Double depositeMoney=acounts.getMoney();//提现金额
+			Double loanMoney=rolloutmoney-acounts.getMoney();//借款金额
+			Users users=new Users();
+			
+			
 			return "noEnoughMoney";//信存宝账户没有足够金额
 		}
 	}

@@ -300,7 +300,7 @@ $(document).ready(function(){
 					<span class="toolfoot left">
 						<ul>
 							<li>
-								<div id="tool01"><a href="javascript:;" class="blue">账户余额存入</a> |</div>
+								<div id="tool01"><a id="saveAcount" href="javascript:;" class="blue">账户余额存入</a> |</div>
 								<div class="tooltip cuenrumain">
 									<div class="tippic"><img src="../../images/acc.jpg"  width="20" height="12" /></div>
 		  							<div id="tool01_close" class="tipclose">
@@ -319,16 +319,18 @@ $(document).ready(function(){
 										<span class="fontxy"><input id="readme" type="checkbox" checked="checked" /> 我已阅读并接收<a href="../../../about/xcb_xieyi.htm"  class="blue">《信存宝服务用户协议》</a></span>
 										<span class="fontxy" style="display:none;"><i class="icon01 AllIcon"></i>份额已满，敬请期待下一轮发布</span>
 									</div>
-									<div class="tipcuenrusub"><a href="#" class="sub02" id="crSub">提交</a><p id="crjuhua" style="display: none;"><img src="../../images/load.gif"  width="28" height="28" /></p><p id="crFailP" style="display:none;"><i class="Icon01 AllIcon"></i><span id="crFail" style="color:red">存入失败</span></p>
+									<div class="tipcuenrusub"><a id="saveAcountSubmit" href="javascript:;" class="sub02" id="crSub">提交</a><p id="crjuhua" style="display: none;"><img src="../../images/load.gif"  width="28" height="28" /></p><p id="crFailP" style="display:none;"><i class="Icon01 AllIcon"></i><span id="crFail" style="color:red">存入失败</span></p>
 									</div>
 									<div class="clear"></div>
 								</div>
 							</li>
 							<li>
-								<div id="tool02"><a href="#" class="blue">转出</a> |</div>
+								<div id="tool02"><a id="rolloutAcount" href="javascript:;" class="blue">转出</a> |</div>
 								<div class="tooltip zhuanchumain">
 	  								<div class="tippic"><img src="../../images/acc.jpg"  width="20" height="12" /></div>
-	  								<div id="tool02_close" class="tipclose"><img src="../../images/close.png"  width="11" height="11" /></div>
+	  								<div id="tool02_close" class="tipclose">
+	  									<a id="closezhuanchumain" href="javascript:;"><img src="../../images/close.png"  width="11" height="11" /></a>
+	  								</div>
 									<div class="tipcuenru">
 										<dl class="w01">
 											<dt>金额：</dt>
@@ -342,7 +344,7 @@ $(document).ready(function(){
 	  									<span class="fontxy"><input id="readme2" type="checkbox" checked="checked" /> 我已阅读并接收<a href="../../../about/xcb_xieyi.htm" class="blue">《信存宝服务用户协议》</a></span>
 	  									<span class="fontxy" style="display:none;"><i class="icon01 AllIcon"></i>份额已满，敬请期待下一轮发布</span>
 									</div>
-									<div class="tipcuenrusub"><a id="zcSub" href="#" class="sub02">提交</a><p id="zcjuhua" style="display:none;"><img src="../../images/load.gif"="https://xin/2.0/images/load.gif" width="28" height="28" /></p><p id="zcFailP" style="display: none;"><i class="Icon01 AllIcon"></i><span id="zcFail" style="color:red">存入失败</span></p>
+									<div class="tipcuenrusub"><a id="zcSub" href="javascript:;" class="sub02">提交1</a><p id="zcjuhua" style="display:none;"><img src="../../images/load.gif"="https://xin/2.0/images/load.gif" width="28" height="28" /></p><p id="zcFailP" style="display: none;"><i class="Icon01 AllIcon"></i><span id="zcFail" style="color:red">存入失败</span></p>
 									</div>
 									<div class="clear"></div>
 	  							</div>

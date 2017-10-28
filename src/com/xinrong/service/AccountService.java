@@ -69,6 +69,11 @@ public interface AccountService {
     List<Acounts> selectAll(Acounts acounts);
     
     /**
+     * 条件查询单个对象
+     */
+    Acounts selectOneByObject(Acounts acounts);
+    
+    /**
      * 根据用户id查询用户资金账户表
      */
     Acounts selectByUserId(Integer userid);
@@ -78,9 +83,19 @@ public interface AccountService {
      */
     Acounts selectLoanAcountByUserId(Integer userid);
     
+    
     /**
-     * 根据 项目id查询项目资金账户表
+     * 根据项目id查询项目资金账户表
      * @return
      */
     Acounts selectByProjectId(Integer  projectid);
+    
+    /**
+     * 信存宝账户充值
+     */
+    String xincunbaoRecharge(Acounts  acounts,Double addmoney);
+    /**
+     * 信存宝账户提现
+     */
+    String xincunbaoDeposit(Acounts  acounts,Double rolloutmoney);
 }

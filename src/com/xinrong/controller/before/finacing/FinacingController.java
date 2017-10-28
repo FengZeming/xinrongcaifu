@@ -79,10 +79,10 @@ public class FinacingController {
 	 */
 	@RequestMapping("xin/commitProject.html")
 	public String commitProject(@ModelAttribute("project")Project project,HttpSession session){
-//		Users user=(Users)session.getAttribute("user");
-//		Integer id=user.getId();
-//		project.setFinancinguserid(id);
-		project.setFinancinguserid(1);//测试用，实际上需要改成session中的用户id
+		Users user=(Users)session.getAttribute("user");
+		Integer id=user.getId();
+		project.setFinancinguserid(id);
+//		project.setFinancinguserid(1);//测试用，实际上需要改成session中的用户id
 		project.setExpectedannualized(project.getExpectedannualized()/100);//将用户输入的数值除以100作为预期收益率
 		boolean a=projectService.insertSelective(project);
 		if(a){

@@ -52,7 +52,7 @@ public class LoginController {
 			return JSON.toJSONString(falg);
 		}
 		Users users1=usersService.getLoginUser(username);
-			session.setAttribute("user1", users1);
+			session.setAttribute("user", users1);
 			System.out.println(falg);
 			return JSON.toJSONString(falg);
 

@@ -39,7 +39,7 @@ public class AccountSetting {
 	 */
 	@RequestMapping("xin/2.0/views/account/account_settings.shtml.htm")
 	public String goIntoAccountSetting(HttpSession session,Model model){
-		Users users=(Users) session.getAttribute("user1");
+		Users users=(Users) session.getAttribute("user");
 		model.addAttribute("users",users);
 		return "xin/2.0/views/account/account_settings";
 	}

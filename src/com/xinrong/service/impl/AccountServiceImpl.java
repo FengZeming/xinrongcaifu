@@ -127,6 +127,13 @@ public class AccountServiceImpl implements AccountService{
 	public List<Acounts> selectAll(Acounts acounts) {
 		return acountsMapper.selectAll(acounts);
 	}
+	
+	/**
+	 * 条件查询单个对象
+	 */
+	public Acounts selectOneByObject(Acounts acounts) {
+		return acountsMapper.selectOneByObject(acounts);
+	}
 
 	/**
 	 * 根据用户id查询用户资金账户
@@ -157,4 +164,55 @@ public class AccountServiceImpl implements AccountService{
 		return acountsMapper.selectOneByObject(acounts);
 	}
 
+	/**
+     * 信存宝账户充值
+     */
+	public String xincunbaoRecharge(Acounts acounts,Double addmoney) {
+		Acounts finacingAcounts=new Acounts();//资金账户
+		finacingAcounts.setUserid(acounts.getUserid());
+		finacingAcounts.setType(2);
+		finacingAcounts=acountsMapper.selectOneByObject(finacingAcounts);
+		if(finacingAcounts.getMoney()>=addmoney){//判断资金账户是否有足够金额转入
+			finacingAcounts.setMoney(finacingAcounts.getMoney()-addmoney);
+			int num=acountsMapper.updateByPrimaryKeySelective(finacingAcounts);
+			if(num<=0){
+				return "error";//未知错误
+			}
+			acounts.setMoney(acounts.getMoney()+addmoney);//信存宝账户增加金额
+			int a=acountsMapper.updateByPrimaryKeySelective(acounts);//修改数据库
+			if(a>0){
+				return "true";//成功
+			}else{
+				return "error";//未知错误
+			}
+		}else{
+			return "noEnoughMoney";//资金账户没有足够金额
+		}
+	}
+
+	/**
+     * 信存宝账户提现
+     */
+	public String xincunbaoDeposit(Acounts acounts,Double rolloutmoney) {
+		if(acounts.getMoney()>=rolloutmoney){
+			acounts.setMoney(acounts.getMoney()-rolloutmoney);
+			int a=acountsMapper.updateByPrimaryKeySelective(acounts);//信存宝账户提现
+			if(a<=0){
+				return "error";//未知错误
+			}
+			Acounts finacingAcounts=new Acounts();//资金账户
+			finacingAcounts.setUserid(acounts.getUserid());
+			finacingAcounts.setType(2);
+			finacingAcounts=acountsMapper.selectOneByObject(finacingAcounts);
+			finacingAcounts.setMoney(finacingAcounts.getMoney()+rolloutmoney);
+			int b=acountsMapper.updateByPrimaryKeySelective(finacingAcounts);
+			if(b>0){
+				return "true";//成功
+			}else{
+				return "error";//未知错误
+			}
+		}else{
+			return "noEnoughMoney";//信存宝账户没有足够金额
+		}
+	}
 }

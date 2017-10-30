@@ -20,15 +20,10 @@ import com.xinrong.util.ProjectUtil;
 public class Test {
 
 	public static void main(String[] args) {
-//		ApplicationContext context=new ClassPathXmlApplicationContext("applicationContext.xml");
-//		ProjectService projectService=(ProjectService)context.getBean("projectServiceImpl");
-////		Project project=new Project();
-////		List<Project> list=projectService.selectAll(project);
-//		Project project=projectService.selectByPrimaryKey(1);
-//		System.out.println(project.getProjectname());
-//		System.out.println(project.getReceivablewayName());
-		Date date=new Date();
-		String aString=DateTimeUtil.changeFormat(date, "yyMMddhhmmss");
-		System.out.println(aString);
+		ApplicationContext context=new ClassPathXmlApplicationContext("applicationContext.xml");
+		ProjectService projectService=(ProjectService)context.getBean("projectServiceImpl");
+		Project project=new Project();
+		project.setSeriesid(1);
+		projectService.insertSelective(project);
 	}
 }

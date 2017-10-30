@@ -1,0 +1,11 @@
+#wgt-dialog-invest-two-wrapper{
+	position:fixed ;
+	left: 400;
+	top: 150;
+	background-color: white;
+	border: 1px solid orangered;
+	z-index: 10;
+}
+#closeInvest{
+	float:right;
+}

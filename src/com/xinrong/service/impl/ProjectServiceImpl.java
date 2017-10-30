@@ -110,11 +110,23 @@ public class ProjectServiceImpl implements ProjectService{
 		project.setProjectcreationtime(new Date());//设置项目创建日期
 		project.setProjectprogress(1);//设置项目进程为未审核
 		project.setReceivableway(receivableway);//设置项目回款方式
-		int i=projectMapper.insertSelective(project);
-		if (i>0) {
-			return true;
+		int i=projectMapper.insertSelective(project);//项目表中添加记录
+		if (i<=0) {
+			return false;
 		}
-		return false;
+		
+		//获取刚才创建的项目对象的id
+		Integer projectid=projectMapper.selectMaxId();
+		//创建项目资金账户对象
+		Acounts acounts=new Acounts();
+		acounts.setProjectid(projectid);
+		acounts.setType(4);
+		acounts.setMoney((double) 0);
+		int j=acountsMapper.insertSelective(acounts);//向账户表中添加数据
+		if(j<=0){
+			return false;
+		}
+		return true;
 	}
 
 	/**
@@ -166,6 +178,7 @@ public class ProjectServiceImpl implements ProjectService{
 		return list;
 	}
 
+	
 	/**
 	 * 投资
 	 */
@@ -224,5 +237,12 @@ public class ProjectServiceImpl implements ProjectService{
 		}
 		
 		return "true";
+	}
+
+	/**
+	 * 条件查询-获取一个对象
+	 */
+	public Project selectOneByObject(Project project) {
+		return projectMapper.selectOneByObject(project);
 	}
 }

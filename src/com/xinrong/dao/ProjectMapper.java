@@ -22,6 +22,10 @@ public interface ProjectMapper {
     
     List<Project> selectAll(Project record);
     
+    Project selectOneByObject(Project project);//条件查询-返回一个对象
+    
     //获取当前系列所产生当日项目的最大id
     int selectBiggistBySeiresId(@Param("seriesid")Integer seriesId,@Param("projectcreationtime")Date projectcreationtime);
+    
+    Integer selectMaxId();//获取项目的最大id
 }

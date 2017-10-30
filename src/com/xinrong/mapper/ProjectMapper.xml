@@ -281,4 +281,60 @@
     	0)
     	
     </select>
+    
+    <select id="selectOneByObject" resultMap="BaseResultMap">
+	    select 
+	    <include refid="selectList" />
+	    FROM project p 
+	    <trim prefix="where" suffix="" prefixOverrides="and" >
+      <if test="id != null" >
+       and id=#{id}
+      </if>
+      <if test="projectname != null" >
+      and  projectName=#{projectname}
+      </if>
+      <if test="projectfinancingtime != null" >
+      and  projectFinancingTime=#{projectfinancingtime}
+      </if>
+      <if test="projectduration != null" >
+       and projectDuration=#{projectduration}
+      </if>
+      <if test="projectcreationtime != null" >
+       and projectCreationTime=#{projectcreationtime}
+      </if>
+      <if test="projectaudittime != null" >
+      and  projectAuditTime=#{projectaudittime}
+      </if>
+      <if test="startdatefinancing != null" >
+      and  startDateFinancing=#{startdatefinancing}
+      </if>
+      <if test="expectedannualized != null" >
+       and expectedAnnualized=#{expectedannualized}
+      </if>
+      <if test="seriesid != null" >
+      and  seriesId=#{seriesid}
+      </if>
+      <if test="expectedfinancingamount != null" >
+      and  expectedFinancingAmount=#{expectedfinancingamount}
+      </if>
+      <if test="actualfinancingamount != null" >
+      and  actualFinancingAmount=#{actualfinancingamount}
+      </if>
+      <if test="insurancecompanyid != null" >
+      and  insuranceCompanyId=#{insurancecompanyid}
+      </if>
+      <if test="financinguserid != null" >
+      and  financingUserId=#{financinguserid}
+      </if>
+      <if test="projectprogress != null" >
+      and  p.projectProgress=#{projectprogress}
+      </if>
+      <if test="receivableway != null" >
+      and  p.receivableWay=#{receivableway}
+      </if>
+    </trim>
+    </select>
+    <select id="selectMaxId" resultType="int">
+    	select max(id) from project
+    </select>
 </mapper>

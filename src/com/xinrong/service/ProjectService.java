@@ -24,5 +24,7 @@ public interface ProjectService {
 	    
 	    List<Project> selectBySeriesId(int seriesId);//根据系列id查询项目
 	    
+	    Project selectOneByObject(Project project);//条件查询-返回一个对象
+	    
 	    String invest(Integer userid,Integer projectid,Double investmoney,String password);//投资
 }

@@ -3,6 +3,7 @@ package com.xinrong.service;
 import java.util.List;
 
 import com.xinrong.bean.Acounts;
+import com.xinrong.bean.Project;
 /**
  * 资金账户Service
  * @author lenovo
@@ -98,4 +99,10 @@ public interface AccountService {
      * 信存宝账户提现
      */
     String xincunbaoDeposit(Acounts  acounts,Double rolloutmoney);
+    /**
+     * 将项目款打给融资方
+     */
+    boolean transferToFinacinger(Project project);
+    
+
 }

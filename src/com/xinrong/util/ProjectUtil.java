@@ -49,4 +49,16 @@ public class ProjectUtil {
 		}
 		return commission;
 	}
+	
+	/**
+	 * 计算融资方支付的佣金
+	 */
+	public static Double getFinacingCommission(Double money){
+		Double rate=0.003;//固定0.3%费率
+		Double commission=money*rate;//佣金
+		if(commission<5){
+			commission=(double) 5;//最低佣金5元
+		}
+		return commission;
+	}
 }

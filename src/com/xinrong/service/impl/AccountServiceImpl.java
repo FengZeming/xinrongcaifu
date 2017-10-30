@@ -5,7 +5,9 @@ import java.util.List;
 
 import com.xinrong.dao.AcountsMapper;
 import com.xinrong.dao.DepositrecordMapper;
+import com.xinrong.dao.InvestrecordsMapper;
 import com.xinrong.dao.LoanrecoredMapper;
+import com.xinrong.dao.ProjectMapper;
 import com.xinrong.dao.UsersMapper;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,10 +15,13 @@ import org.springframework.stereotype.Service;
 
 import com.xinrong.bean.Acounts;
 import com.xinrong.bean.Depositrecord;
+import com.xinrong.bean.Investrecord;
 import com.xinrong.bean.Loanrecored;
+import com.xinrong.bean.Project;
 import com.xinrong.bean.Users;
 import com.xinrong.service.AccountService;
 import com.xinrong.util.BusinessNoUtil;
+import com.xinrong.util.ProjectUtil;
 /**
  * 资金账户impl
  * @author lenovo
@@ -32,6 +37,9 @@ public class AccountServiceImpl implements AccountService{
 	private LoanrecoredMapper loanrecoredMapper;
 	@Autowired
 	private DepositrecordMapper depositrecordMapper;
+	@Autowired
+	private InvestrecordsMapper investrecordsMapper;
+	
 	
 	public AcountsMapper getAcountsMapper() {
 		return acountsMapper;
@@ -63,6 +71,17 @@ public class AccountServiceImpl implements AccountService{
 
 	public void setDepositrecordMapper(DepositrecordMapper depositrecordMapper) {
 		this.depositrecordMapper = depositrecordMapper;
+	}
+	
+	
+
+
+	public InvestrecordsMapper getInvestrecordsMapper() {
+		return investrecordsMapper;
+	}
+
+	public void setInvestrecordsMapper(InvestrecordsMapper investrecordsMapper) {
+		this.investrecordsMapper = investrecordsMapper;
 	}
 
 	/**
@@ -331,4 +350,48 @@ public class AccountServiceImpl implements AccountService{
 			}
 		}
 	}
+
+	/**
+	 * 将项目款打给融资方
+	 */
+	public boolean transferToFinacinger(Project project) {
+		Acounts proAcounts=new Acounts();
+		proAcounts.setProjectid(project.getId());
+		proAcounts.setType(4);
+		proAcounts=acountsMapper.selectOneByObject(proAcounts);//获取项目资金账户对象
+		Double money=proAcounts.getMoney();//交易金额
+		Double extraMoney=ProjectUtil.getFinacingCommission(money);//计算融资方需要支付的佣金
+		//资金账户金额清零
+		proAcounts.setMoney((double) 0);
+		int num1=acountsMapper.updateByPrimaryKeySelective(proAcounts);
+		if(num1<=0){
+			return false;
+		}
+		//融资方资金账户增加款项
+		Acounts uesrAcounts=new Acounts();
+		uesrAcounts.setUserid(project.getFinancinguserid());
+		uesrAcounts.setType(2);
+		uesrAcounts=acountsMapper.selectOneByObject(uesrAcounts);//获取该项目的融资客户的资金账户表对象
+		uesrAcounts.setMoney(uesrAcounts.getMoney()+money-extraMoney);
+		int num2=acountsMapper.updateByPrimaryKeySelective(uesrAcounts);
+		if(num2<=0){
+			return false;
+		}
+		//投资记录表产生记录，类型为2（转款至融资方）
+		Investrecord investrecord=new Investrecord();
+		investrecord.setBusinessno(BusinessNoUtil.createInvestRecordNo(project.getFinancinguserid(), project.getId()));//交易流水号
+		investrecord.setItemid(project.getId());//关联项目id
+		investrecord.setUserid(project.getFinancinguserid());//关联用户id
+		investrecord.setMoney(money);//交易金额
+		investrecord.setExtramoney(extraMoney);//附加费用
+		investrecord.setBusinessdate(new Date());//交易日期
+		investrecord.setBusinesstype(2);//类型为2-转款至融资方
+		int num3=investrecordsMapper.insertSelective(investrecord);
+		if(num3<=0){
+			return false;
+		}
+		return true;
+	}
+	
+	
 }

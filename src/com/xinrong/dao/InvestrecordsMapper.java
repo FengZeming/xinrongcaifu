@@ -18,4 +18,6 @@ public interface InvestrecordsMapper {     //投资记录
     int updateByPrimaryKey(Investrecord record);    //更新所有投资记录
     
     List<Investrecord> selectAll(Investrecord investrecord);   //查询所有投资记录
+    
+    Investrecord selectOneByObject(Investrecord investrecord);//查询一条投资记录-条件查询
 }

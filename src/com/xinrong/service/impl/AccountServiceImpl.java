@@ -377,12 +377,17 @@ public class AccountServiceImpl implements AccountService{
 		if(num2<=0){
 			return false;
 		}
+		//平台资金账户增加收入（即额外费用）
+		boolean a=this.profix(extraMoney);
+		if(!a){
+			return false;
+		}
 		//投资记录表产生记录，类型为2（转款至融资方）
 		Investrecord investrecord=new Investrecord();
 		investrecord.setBusinessno(BusinessNoUtil.createInvestRecordNo(project.getFinancinguserid(), project.getId()));//交易流水号
 		investrecord.setItemid(project.getId());//关联项目id
 		investrecord.setUserid(project.getFinancinguserid());//关联用户id
-		investrecord.setMoney(money);//交易金额
+		investrecord.setMoney(money-extraMoney);//交易金额
 		investrecord.setExtramoney(extraMoney);//附加费用
 		investrecord.setBusinessdate(new Date());//交易日期
 		investrecord.setBusinesstype(2);//类型为2-转款至融资方
@@ -393,5 +398,55 @@ public class AccountServiceImpl implements AccountService{
 		return true;
 	}
 	
-	
+	/**
+	 * 平台账户收入
+	 */
+	public boolean profix(Double extraMoney){
+		Acounts acounts=new Acounts();
+		acounts.setType(1);
+		acounts=acountsMapper.selectOneByObject(acounts);
+		acounts.setMoney(acounts.getMoney()+extraMoney);
+		int a=acountsMapper.updateByPrimaryKeySelective(acounts);
+		if(a>0){
+			return true;
+		}else {
+			return false;
+		}
+	}
+
+	/**
+	 * 融资方返款
+	 */
+	public boolean FinacingerBackToPlatphom(Project project) {
+		Integer projectid=project.getId();//获取项目id
+		Integer finacinguserid=project.getFinancinguserid();//关联该项目的用户id
+		//获取转款给融资方记录
+		Investrecord investrecord=new Investrecord();
+		investrecord.setItemid(projectid);
+		investrecord=investrecordsMapper.selectOneByObject(investrecord);
+		Double money=investrecord.getMoney()+investrecord.getExtramoney();//获取融资方融资的金额
+		Double backMoney=money*project.getExpectedannualized();//金额*预期融资收益率=融资方需返还的金额
+		//获取融资方用户资金账户对象
+		Acounts finacinguserAcounts=new  Acounts();
+		finacinguserAcounts.setUserid(finacinguserid);
+		finacinguserAcounts.setType(2);
+		finacinguserAcounts=acountsMapper.selectOneByObject(finacinguserAcounts);
+		//获取项目资金账户对象
+		Acounts projectAcounts=new Acounts();
+		projectAcounts.setProjectid(projectid);
+		projectAcounts.setType(4);
+		projectAcounts=acountsMapper.selectOneByObject(projectAcounts);
+		if(finacinguserAcounts.getMoney()>=backMoney){//有足够金额返款
+			finacinguserAcounts.setMoney(finacinguserAcounts.getMoney()-backMoney);
+			int num1=acountsMapper.updateByPrimaryKeySelective(finacinguserAcounts);//融资方账户金额减少
+			projectAcounts.setMoney(projectAcounts.getMoney()+backMoney);
+			int num2=acountsMapper.updateByPrimaryKeySelective(projectAcounts);//项目资金账户增加
+			
+		}else{//没有足够金额返款
+			
+		}
+		
+		
+		return false;
+	}
 }

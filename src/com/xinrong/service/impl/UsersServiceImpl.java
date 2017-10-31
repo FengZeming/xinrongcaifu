@@ -5,13 +5,17 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.xinrong.bean.Acounts;
 import com.xinrong.bean.Users;
+import com.xinrong.dao.AcountsMapper;
 import com.xinrong.dao.UsersMapper;
 import com.xinrong.service.UsersService;
 @Service
 public class UsersServiceImpl implements UsersService{
 	@Autowired
 	private UsersMapper usersMapper;
+	@Autowired
+	private AcountsMapper acountsMapper;
 	
 
 	public UsersMapper getUsersMapper() {
@@ -43,11 +47,22 @@ public class UsersServiceImpl implements UsersService{
 	}
 
 	/**
-	 * 选择性插入
+	 * 注册用户
 	 */
 	public boolean insertSelective(Users record) {
-		int num=usersMapper.insertSelective(record);
-		if(num>0){
+		int num1=usersMapper.insertSelective(record);
+		Integer userid=usersMapper.selectMaxId();
+		//创建用户资金账户表对象
+		Acounts acounts=new Acounts();
+		acounts.setUserid(userid);
+		acounts.setMoney((double) 0);
+		acounts.setType(2);
+		acounts.setPassword("123456");//测试用，暂定为123456
+		int num2=acountsMapper.insertSelective(acounts);//添加至数据库
+		//创建用户借款账户表对象
+		acounts.setType(3);
+		int num3=acountsMapper.insertSelective(acounts);
+		if(num1>0&&num2>0&&num3>0){
 			return true;
 		}else{
 			return false;

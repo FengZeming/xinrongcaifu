@@ -30,6 +30,7 @@ public class RegistController {
 	public String goIntoSuccess(Model model,@ModelAttribute("users")Users users){
 		boolean a=usersService.insertSelective(users);
 		String message="";
+		
 		if(a){
 			message="注册成功";
 		}else{

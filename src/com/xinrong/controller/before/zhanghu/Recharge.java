@@ -37,12 +37,12 @@ public class Recharge {
 	 
 	@RequestMapping("xin/my/recharge.htm")
 	public String goToRecharge(Model model,HttpSession session){
-		Users user=new Users();
-		user.setId(1);
-		user.setName("张三");
-		user.setBankid(1);
-		user.setBanknumber("111111111111112345");
-		session.setAttribute("user", user);
+//		Users user=new Users();
+//		user.setId(1);
+//		user.setName("张三");
+//		user.setBankid(1);
+//		user.setBanknumber("111111111111112345");
+//		session.setAttribute("user", user);
 		//从session获取用户
 	 	Users users=(Users) session.getAttribute("user");
 		//获取用户的ID
@@ -62,16 +62,16 @@ public class Recharge {
 	
 	@RequestMapping(value="money.json",method=RequestMethod.POST)
 	@ResponseBody
-	public Object toAddMonery(@RequestParam String money){
+	public Object toAddMonery(@RequestParam String money,HttpSession session){
 		
 		
 		  //从session获取用户
-		  //Users users=(Users) session.getAttribute("user");
+		  Users users=(Users) session.getAttribute("user");
 		  //获取用户的ID
 		  //users.getId()
 		//查询账户的原本
 		Acounts acounts=new Acounts();
-		acounts.setUserid(1);		
+		acounts.setUserid(users.getId());		
 		List<Acounts> list=accountService.selectAll(acounts);
 		Acounts acounts1=list.get(0);
 		Double yuE=acounts1.getMoney();
@@ -82,7 +82,7 @@ public class Recharge {
 		Integer acountId=acounts1.getId();
 		acounts2.setId(acountId);
 		acounts2.setMoney(yuE+Double.parseDouble(money));
-		acounts2.setUserid(1);
+		acounts2.setUserid(users.getId());
 		boolean falg=accountService.updateByPrimaryKeySelective(acounts2);
 		
 		return JSON.toJSONString(falg);

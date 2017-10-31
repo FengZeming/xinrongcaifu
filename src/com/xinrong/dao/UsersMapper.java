@@ -26,4 +26,8 @@ public interface UsersMapper {
      * @return
      */
     Users getLoginUser(@Param("username")String username);
+    /**
+     * 获取最大id
+     */
+    int selectMaxId();
 }

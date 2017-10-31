@@ -103,6 +103,12 @@ public interface AccountService {
      * 将项目款打给融资方
      */
     boolean transferToFinacinger(Project project);
-    
-
+    /**
+     * 平台账户收入
+     */
+    boolean profix(Double extraMoney);
+    /**
+     * 融资方返款至平台
+     */
+    boolean FinacingerBackToPlatphom(Project project);
 }

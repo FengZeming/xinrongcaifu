@@ -142,32 +142,63 @@
   		select 
     <include refid="Base_Column_List" />
     from Investrecord
-    <trim prefix="where" suffix="" suffixOverrides="and" >
-      <if test="businessNo != null" >
-        businessNo=#{businessno}
+    <trim prefix="where" suffix="" prefixOverrides="and" >
+      <if test="businessno != null" >
+      and  businessNo=#{businessno}
       </if>
-      <if test="itemId != null" >
-        itemId=#{itemid}
+      <if test="itemid != null" >
+       and   itemId=#{itemid}
       </if>
-      <if test="userId != null" >
-        userId=#{userid}
+      <if test="userid != null" >
+      and    userId=#{userid}
       </if>      
       <if test="money != null" >
-        money=#{money}
+      and    money=#{money}
       </if>
-      <if test="extraMoney != null" >
-        extraMoney=#{extramoney}
+      <if test="extramoney != null" >
+       and   extraMoney=#{extramoney}
       </if>
-      <if test="businessDate != null" >
-        businessDate=#{businessdate}
+      <if test="businessdate != null" >
+      and    businessDate=#{businessdate}
       </if>
-      <if test="businessType != null" >
-        businessType=#{businesstype}
+      <if test="businesstype != null" >
+       and   businessType=#{businesstype}
       </if>
       <if test="remarks != null" >
-        remarks=#{remarks}
+       and   remarks=#{remarks}
       </if>
     </trim> 
+  </select>
   
+  <select id="selectOneByObject" resultMap="BaseResultMap">
+  	select 
+    <include refid="Base_Column_List" />
+    from Investrecord
+    <trim prefix="where" suffix="" prefixOverrides="and" >
+      <if test="businessno != null" >
+      and  businessNo=#{businessno}
+      </if>
+      <if test="itemid != null" >
+       and   itemId=#{itemid}
+      </if>
+      <if test="userid != null" >
+      and    userId=#{userid}
+      </if>      
+      <if test="money != null" >
+      and    money=#{money}
+      </if>
+      <if test="extramoney != null" >
+       and   extraMoney=#{extramoney}
+      </if>
+      <if test="businessdate != null" >
+      and    businessDate=#{businessdate}
+      </if>
+      <if test="businesstype != null" >
+       and   businessType=#{businesstype}
+      </if>
+      <if test="remarks != null" >
+       and   remarks=#{remarks}
+      </if>
+    </trim> 
   </select>
 </mapper>
